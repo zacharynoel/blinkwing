@@ -27,25 +27,33 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <div className="wrapper">
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
-    </div>
-    <footer>
-      <Link to="/">
-        <img src={Logo} className="logo" alt="Blinkwing"/>
-      </Link>
-      <ul className="foot-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">Services</Link></li>
-        <li><Link to="/">About</Link></li>
-        <li><Link to="/">Blog</Link></li>
-        <li><Link to="/">Contact</Link></li>
-      </ul>
-      <div className="foot-cr">
-        © {new Date().getFullYear()} Blinkwing
+      <div className="wrapper">
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <main>{children}</main>
       </div>
-    </footer>
+      <footer>
+        <Link to="/">
+          <img src={Logo} className="logo" alt="Blinkwing" />
+        </Link>
+        <ul className="foot-links">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Services</Link>
+          </li>
+          <li>
+            <Link to="/">About</Link>
+          </li>
+          <li>
+            <Link to="/">Blog</Link>
+          </li>
+          <li>
+            <Link to="/">Contact</Link>
+          </li>
+        </ul>
+        <div className="foot-cr">© {new Date().getFullYear()} Blinkwing</div>
+      </footer>
     </>
   )
 }

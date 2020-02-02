@@ -1,38 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-@media only screen and (max-width: 800px){
-  .nav-links{
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@media only screen and (max-width: 800px) {
+  .nav-links {
+
     display: none;
   }
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo{
+.logo {
   max-height: 40px;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10%;
-    background-color: rgba(211, 211, 211, 0.308);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: rgba(211, 211, 211, 0.308);
 }
 
-main{
+main {
   padding: 10px 10%;
 }
 
-.nav-links, .foot-links{
+.nav-links,
+.foot-links {
   list-style: none;
 }
 
-.nav-links li, .nav-links a{
+.nav-links li,
+.nav-links a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 17px;
@@ -40,25 +44,28 @@ main{
   text-decoration: none;
 }
 
-.nav-links li, .foot-links li{
+.nav-links li,
+.foot-links li {
   display: inline-block;
   padding: 10px 10px;
 }
 
-.nav-links li a, .foot-links li a{
+.nav-links li a,
+.foot-links li a {
   transition: all 0.3s ease 0s;
 }
 
-.nav-links li a:hover, .foot-links li a:hover{
+.nav-links li a:hover,
+.foot-links li a:hover {
   color: #425f7c;
 }
 
-.wrapper{
+.wrapper {
   min-height: 100vh;
   margin-bottom: -130px;
 }
 
-footer{
+footer {
   display: flexbox;
   color: #162a3e;
   background-color: rgba(211, 211, 211, 0.308);
@@ -68,7 +75,8 @@ footer{
   padding-top: 10px;
 }
 
-.foot-links li, .foot-links a{
+.foot-links li,
+.foot-links a {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -76,7 +84,7 @@ footer{
   text-decoration: none;
 }
 
-.foot-cr{
+.foot-cr {
   padding-top: 10px;
   font-size: 15px;
   color: #162a3e;

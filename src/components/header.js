@@ -6,16 +6,26 @@ import Logo from "../images/full-logo.svg"
 const Header = ({ siteTitle }) => (
   <header>
     <Link to="/">
-      <img src={Logo} className="logo" alt="Blinkwing"/>
+      <img src={Logo} className="logo" alt="Blinkwing" />
     </Link>
-    
+
     <nav>
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">Services</Link></li>
-        <li><Link to="/">About</Link></li>
-        <li><Link to="/">Blog</Link></li>
-        <li><Link to="/">Contact</Link></li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Services</Link>
+        </li>
+        <li>
+          <Link to="/">About</Link>
+        </li>
+        <li>
+          <Link to="/">Blog</Link>
+        </li>
+        <li>
+          <Link to="/">Contact</Link>
+        </li>
       </ul>
     </nav>
   </header>
