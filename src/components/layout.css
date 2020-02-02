@@ -1,91 +1,88 @@
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-@media only screen and (max-width: 800px) {
-  .nav-links {
-
-    display: none;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .logo {
-  max-height: 40px;
+  max-height: 50px;
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  font-weight: bold;
+  color: #162a3e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #425f7c;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px 10%;
   background-color: rgba(211, 211, 211, 0.308);
-}
-
-main {
-  padding: 10px 10%;
-}
-
-.nav-links,
-.foot-links {
-  list-style: none;
-}
-
-.nav-links li,
-.nav-links a {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 17px;
-  color: #162a3e;
-  text-decoration: none;
 }
 
-.nav-links li,
-.foot-links li {
-  display: inline-block;
-  padding: 10px 10px;
+.hamburger-menu {
+  order: 1;
+  max-height: 30px;
 }
 
-.nav-links li a,
-.foot-links li a {
-  transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover,
-.foot-links li a:hover {
-  color: #425f7c;
-}
-
-.wrapper {
-  min-height: 100vh;
-  margin-bottom: -130px;
+.nav-links li {
+  display: none;
 }
 
 footer {
-  display: flexbox;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  flex-direction: column;
+  justify-content: space-around;
   color: #162a3e;
   background-color: rgba(211, 211, 211, 0.308);
-  height: 130px;
+  height: 160px;
   align-items: center;
-  text-align: center;
-  padding-top: 10px;
 }
 
-.foot-links li,
-.foot-links a {
+.foot-links li {
+  display: inline-flex;
+  padding: 0px 10px;
+}
+
+.foot-links {
+  font-size: 0.8rem;
+}
+
+.nav-links-collapse li {
+  display: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  color: #162a3e;
-  text-decoration: none;
+  padding: 5px 0px;
+  justify-content: center;
+  background-color: rgba(211, 211, 211, 0.308);
 }
 
-.foot-cr {
-  padding-top: 10px;
-  font-size: 15px;
-  color: #162a3e;
+@media only screen and (min-width: 700px) {
+  header .hamburger-menu,
+  .nav-links-collapse li {
+    display: none;
+  }
+
+  .nav-links li {
+    display: inline-flex;
+    padding: 0px 10px;
+  }
 }

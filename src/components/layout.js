@@ -9,10 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-
 import Header from "./header"
 import "./layout.css"
 import Logo from "../images/full-logo.svg"
+import NavLinks from "./NavLinks"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,30 +30,14 @@ const Layout = ({ children }) => {
       <div className="wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
+        <footer>
+          <NavLinks className="foot-links" />
+          Privacy Policy | © {new Date().getFullYear()} Blinkwing
+          <Link to="/">
+            <img src={Logo} className="logo" alt="Blinkwing" />
+          </Link>
+        </footer>
       </div>
-      <footer>
-        <Link to="/">
-          <img src={Logo} className="logo" alt="Blinkwing" />
-        </Link>
-        <ul className="foot-links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">Services</Link>
-          </li>
-          <li>
-            <Link to="/">About</Link>
-          </li>
-          <li>
-            <Link to="/">Blog</Link>
-          </li>
-          <li>
-            <Link to="/">Contact</Link>
-          </li>
-        </ul>
-        <div className="foot-cr">© {new Date().getFullYear()} Blinkwing</div>
-      </footer>
     </>
   )
 }

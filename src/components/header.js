@@ -2,33 +2,23 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Logo from "../images/full-logo.svg"
+import Hamburger from "../images/hamburger-menu.svg"
+import NavLinks from "./NavLinks"
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <Link to="/">
-      <img src={Logo} className="logo" alt="Blinkwing" />
-    </Link>
+const Header = () => (
+  <>
+    <header>
+      <Link to="/">
+        <img src={Logo} className="logo" alt="Blinkwing" />
+      </Link>
 
-    <nav>
-      <ul className="nav-links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/">Services</Link>
-        </li>
-        <li>
-          <Link to="/">About</Link>
-        </li>
-        <li>
-          <Link to="/">Blog</Link>
-        </li>
-        <li>
-          <Link to="/">Contact</Link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <img src={Hamburger} className="hamburger-menu" alt="Blinkwing" />
+
+      <NavLinks className="nav-links" />
+    </header>
+
+    <NavLinks className="nav-links-collapse" id="expand" />
+  </>
 )
 
 Header.propTypes = {
