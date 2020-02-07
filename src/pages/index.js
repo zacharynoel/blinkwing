@@ -7,6 +7,17 @@ import Image from "components/image"
 import SEO from "components/seo"
 import BgImage from "components/BgImage"
 import Button from "components/Button"
+import Container from "../components/Container"
+import ReactLogo from "../images/react-logo.svg"
+import GatsbyLogo from "../images/gatsby-logo.svg"
+import GraphQLLogo from "../images/graphql-logo.svg"
+import NodeJSLogo from "../images/nodejs-logo.svg"
+import JSLogo from "../images/javascript-logo.svg"
+
+const StackImages = {
+  maxWidth: `15vh`,
+  padding: `10px`,
+}
 
 const LandingContainer = styled(`div`)`
   position: relative;
@@ -88,7 +99,6 @@ const TechStackContainer = styled(`div`)`
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-
     <section>
       <LandingContainer>
         <BgImage
@@ -211,6 +221,17 @@ const IndexPage = ({ data }) => (
       - Our Services (list with feather bullets)
       - Contact form
     */}
+    <Container title="Core Technologies" secondary>
+      <div>
+        <img style={StackImages} src={ReactLogo} alt="React" />
+        <img style={StackImages} src={GatsbyLogo} alt="Gatsby" />
+        <img style={StackImages} src={GraphQLLogo} alt="GraphQL" />
+      </div>
+      <div>
+        <img style={StackImages} src={NodeJSLogo} alt="NodeJS" />
+        <img style={StackImages} src={JSLogo} alt="JavaScript" />
+      </div>
+    </Container>
   </Layout>
 )
 
