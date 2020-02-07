@@ -17,7 +17,7 @@ const Header = () => (
       <NavLinks className="nav-links" />
     </header>
 
-    <NavLinks className="nav-links-collapse" id="expand" />
+    <NavLinks className="nav-links-collapse" />
   </>
 )
 

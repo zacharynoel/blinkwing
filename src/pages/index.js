@@ -1,20 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Container from "../components/Container"
 import SEO from "../components/seo"
+import ReactLogo from "../images/react-logo.svg"
+import GatsbyLogo from "../images/gatsby-logo.svg"
+import GraphQLLogo from "../images/graphql-logo.svg"
+import NodeJSLogo from "../images/nodejs-logo.svg"
+import JSLogo from "../images/javascript-logo.svg"
+
+const StackImages = {
+  maxWidth: `15vh`,
+  padding: `10px`,
+}
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Container title="Core Technologies" secondary>
+      <div>
+        <img style={StackImages} src={ReactLogo} alt="React" />
+        <img style={StackImages} src={GatsbyLogo} alt="Gatsby" />
+        <img style={StackImages} src={GraphQLLogo} alt="GraphQL" />
+      </div>
+      <div>
+        <img style={StackImages} src={NodeJSLogo} alt="NodeJS" />
+        <img style={StackImages} src={JSLogo} alt="JavaScript" />
+      </div>
+    </Container>
   </Layout>
 )
 
