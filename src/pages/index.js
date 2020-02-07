@@ -7,11 +7,11 @@ import SEO from "components/seo"
 import BgImage from "components/BgImage"
 import Button from "components/Button"
 import Container from "../components/Container"
-import ReactLogo from "../images/react-logo.svg"
-import GatsbyLogo from "../images/gatsby-logo.svg"
-import GraphQLLogo from "../images/graphql-logo.svg"
-import NodeJSLogo from "../images/nodejs-logo.svg"
-import JSLogo from "../images/javascript-logo.svg"
+import ReactLogo from "../images/react-icon.png"
+import GatsbyLogo from "../images/gatsby-icon.png"
+import GraphQLLogo from "../images/graphql-icon.png"
+import NodeJSLogo from "../images/nodejs-icon.png"
+import JSLogo from "../images/js-icon.png"
 
 const StackImages = {
   maxWidth: `15vh`,
@@ -86,6 +86,32 @@ const Bar = styled(`div`)`
   ${({ right }) => right && "border-radius: 0 0 0 300px;"}
 `
 
+const IconsContainer = styled(`div`)`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  img {
+    max-height: 100px;
+    margin: 0 auto;
+  }
+`
+
+const IconWrapper = styled(`div`)`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 42, 62, 1);
+  padding: 5px 5px 15px;
+  color: white;
+  width: 120px;
+  margin: 5px;
+`
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -114,27 +140,40 @@ const IndexPage = ({ data }) => (
     <section style={{ position: "relative", width: "100%" }}>
       <Bar />
       <Bar right />
+      <Container title="Modern Tech To Our Advantage">
+        <p>
+          Tech can only advance through better development practices. This is
+          why at Blinkwing we pride ourselves in always staying up-to-date on
+          the latest tools and frameworks available to build the best websites
+          and applications.
+        </p>
+      </Container>
     </section>
 
-    <Container title="Modern Tech To Our Advantage">
-      <p style={{ padding: "1.5rem 3rem" }}>
-        Tech can only advance through better development practices. This is why
-        at Blinkwing we pride ourselves in always staying up-to-date on the
-        latest tools and frameworks available to build the best websites and
-        applications.
-      </p>
-    </Container>
-
     <Container title="Core Technologies" secondary>
-      <div>
-        <img style={StackImages} src={ReactLogo} alt="React" />
-        <img style={StackImages} src={GatsbyLogo} alt="Gatsby" />
-        <img style={StackImages} src={GraphQLLogo} alt="GraphQL" />
-      </div>
-      <div>
-        <img style={StackImages} src={NodeJSLogo} alt="NodeJS" />
-        <img style={StackImages} src={JSLogo} alt="JavaScript" />
-      </div>
+      <IconsContainer>
+        <IconWrapper>
+          <img style={StackImages} src={ReactLogo} alt="React" />
+          React
+        </IconWrapper>
+        <IconWrapper>
+          <img style={StackImages} src={GatsbyLogo} alt="Gatsby" />
+          Gatsby
+        </IconWrapper>
+        <IconWrapper>
+          <img style={StackImages} src={GraphQLLogo} alt="GraphQL" />
+          GraphQL
+        </IconWrapper>
+        <IconWrapper>
+          <img style={StackImages} src={NodeJSLogo} alt="NodeJS" />
+          NodeJS
+        </IconWrapper>
+        <IconWrapper>
+          <img style={StackImages} src={JSLogo} alt="JavaScript" />
+          JavaScript
+        </IconWrapper>
+      </IconsContainer>
+      <div></div>
     </Container>
 
     {/* 
