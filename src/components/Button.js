@@ -17,7 +17,9 @@ const ButtonContainer = styled.button`
   font-weight: bold;
   font-size: 1.3em;
   width: 19rem;
+  max-width: calc(100vw - 20px);
   padding: 13px 0;
+  margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   outline: none;
   cursor: pointer;
