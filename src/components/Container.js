@@ -2,23 +2,32 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const ContainerStyle = styled.div`
+const ContainerStyle = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  color: #162a3e;
   justify-content: space-around;
   flex-wrap: nowrap;
-  padding: 1rem;
+  padding: 1rem 3rem;
 
   ${({ secondary }) => secondary && "background-color: #EDEDED;"}
+
+  h2 {
+    text-align: center;
+  }
+  h2,
+  p {
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 500px;
+  }
 `
 
 const Container = ({ title, secondary, children, ...props }) => (
   <ContainerStyle {...props} secondary={secondary}>
-    <h2 style={{ paddingBottom: `1rem` }}>{title}</h2>
+    <h2>{title}</h2>
     {children}
   </ContainerStyle>
 )

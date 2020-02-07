@@ -14,8 +14,7 @@ main {
   display: flex;
   align-items: center;
   flex: 1;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column nowrap;
 }
 
 .logo {
@@ -83,7 +82,7 @@ footer {
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #162a3e;
   line-height: 22px;
 }
