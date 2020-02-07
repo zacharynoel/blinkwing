@@ -110,6 +110,9 @@ const IconWrapper = styled(`div`)`
   color: white;
   width: 120px;
   margin: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 15px;
 `
 
 const IndexPage = ({ data }) => (
