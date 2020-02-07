@@ -27,6 +27,7 @@ a {
   font-weight: bold;
   color: #162a3e;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -77,6 +78,28 @@ footer {
   justify-content: center;
   background-color: rgba(211, 211, 211, 0.308);
 }
+
+/* Paragraph and Header Text */
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #162a3e;
+  line-height: 22px;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #162a3e;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+/* */
 
 @media only screen and (min-width: 700px) {
   header .hamburger-menu,
