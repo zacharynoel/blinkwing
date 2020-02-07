@@ -23,7 +23,6 @@ const BgImage = ({ style, ...props }) => (
     {...props}
     style={{
       position: "absolute",
-      left: 0,
       top: 0,
       height: "auto",
       width: "100vw",

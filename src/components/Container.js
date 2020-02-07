@@ -18,7 +18,7 @@ const ContainerStyle = styled.div`
 
 const Container = ({ title, secondary, children, ...props }) => (
   <ContainerStyle {...props} secondary={secondary}>
-    <h1 style={{ paddingBottom: `1rem` }}>{title}</h1>
+    <h2 style={{ paddingBottom: `1rem` }}>{title}</h2>
     {children}
   </ContainerStyle>
 )

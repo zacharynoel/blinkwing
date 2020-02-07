@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "components/layout"
-import Image from "components/image"
 import SEO from "components/seo"
 import BgImage from "components/BgImage"
 import Button from "components/Button"
@@ -44,7 +43,6 @@ const LandingContainer = styled(`div`)`
 
 const ImageCover = styled(`div`)`
   position: absolute;
-  left: 0;
   top: 0;
   height: 437px;
   width: 100vw;
@@ -88,14 +86,6 @@ const Bar = styled(`div`)`
   ${({ right }) => right && "border-radius: 0 0 0 300px;"}
 `
 
-const TechStackContainer = styled(`div`)`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-`
-
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -120,107 +110,21 @@ const IndexPage = ({ data }) => (
         </ButtonsContainer>
       </LandingContainer>
     </section>
+
     <section style={{ position: "relative", width: "100%" }}>
       <Bar />
       <Bar right />
-
-      <div
-        style={{
-          display: "flex",
-          flexFlow: "column nowrap",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          margin: "0 auto",
-          textAlign: "left",
-          padding: "1rem",
-        }}
-      >
-        <h2 style={{ padding: "1rem", textAlign: "center" }}>
-          Modern Tech To Our Advantage
-        </h2>
-        <p style={{ padding: "1.5rem 3rem" }}>
-          Tech can only advance through better development practices. This is
-          why at Blinkwing we pride ourselves in always staying up-to-date on
-          the latest tools and frameworks available to build the best websites
-          and applications.
-        </p>
-      </div>
-    </section>
-    <section
-      style={{
-        background: "#EDEDED",
-        display: "flex",
-        flexFlow: "column nowrap",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        padding: "1rem",
-      }}
-    >
-      <h2 style={{ padding: "1rem" }}>Core Technologies</h2>
-      <TechStackContainer>
-        {/*  When Icons are ready to be added, remove the styling here and replace with display flex, flex-flow of column nowrap... */}
-        <div
-          style={{
-            width: 100,
-            height: 110,
-            border: "1px solid black",
-            margin: "5px auto",
-          }}
-        >
-          React
-        </div>
-        <div
-          style={{
-            width: 100,
-            height: 110,
-            border: "1px solid black",
-            margin: "5px auto",
-          }}
-        >
-          Gatsby
-        </div>
-        <div
-          style={{
-            width: 100,
-            height: 110,
-            border: "1px solid black",
-            margin: "5px auto",
-          }}
-        >
-          GraphQL
-        </div>
-        <div
-          style={{
-            width: 100,
-            height: 110,
-            border: "1px solid black",
-            margin: "5px auto",
-          }}
-        >
-          NodeJS
-        </div>
-        <div
-          style={{
-            width: 100,
-            height: 110,
-            border: "1px solid black",
-            margin: "5px auto",
-          }}
-        >
-          JavaScript
-        </div>
-      </TechStackContainer>
     </section>
 
-    {/* 
-      TODO: Home sections still needing to be added
-      Followed by...
-      - Featured Blog Post
-      - Our Services (list with feather bullets)
-      - Contact form
-    */}
+    <Container title="Modern Tech To Our Advantage">
+      <p style={{ padding: "1.5rem 3rem" }}>
+        Tech can only advance through better development practices. This is why
+        at Blinkwing we pride ourselves in always staying up-to-date on the
+        latest tools and frameworks available to build the best websites and
+        applications.
+      </p>
+    </Container>
+
     <Container title="Core Technologies" secondary>
       <div>
         <img style={StackImages} src={ReactLogo} alt="React" />
@@ -232,6 +136,14 @@ const IndexPage = ({ data }) => (
         <img style={StackImages} src={JSLogo} alt="JavaScript" />
       </div>
     </Container>
+
+    {/* 
+      TODO: Home sections still needing to be added
+      Followed by...
+      - Featured Blog Post
+      - Our Services (list with feather bullets)
+      - Contact form
+    */}
   </Layout>
 )
 
