@@ -71,6 +71,9 @@ const IndexPage = ({ data }) => (
           width: `100%`,
         }}
       >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
+
         <label>
           Name / Business Name
           <input type="text" name="name" />
