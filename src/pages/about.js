@@ -1,22 +1,25 @@
 import React from "react"
+import Image from "gatsby-image"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "components/layout"
+import SEO from "components/seo"
 import Container from "components/Container"
 import TechIcons from "components/TechIcons"
-import FresnoImage from "images/fresno-about.jpg"
 
-const About = () => (
+const About = ({ data }) => (
   <Layout>
     <SEO title="About" />
     <Container title="We're Blinkwing">
-      <img
-        src={FresnoImage}
+      <Image
+        fluid={data.aboutPageImg.childImageSharp.fluid}
         alt="Fresno"
         style={{
-          maxWidth: `100%`,
+          maxWidth: `500px`,
           maxHeight: `40vh`,
           padding: `0 0 1rem`,
+          width: "100%",
+          margin: "0 auto",
         }}
       />
 
@@ -51,3 +54,15 @@ const About = () => (
 )
 
 export default About
+
+export const query = graphql`
+  query {
+    aboutPageImg: file(relativePath: { eq: "fresno-about.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
