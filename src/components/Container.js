@@ -51,12 +51,14 @@ const Container = ({ title, secondary, contact, children, ...props }) => (
 
 Container.propTypes = {
   secondary: PropTypes.bool.isRequired,
+  contact: PropTypes.bool.isRequired,
   children: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
 Container.defaultProps = {
   secondary: false,
+  contact: false,
   title: ``,
 }
 

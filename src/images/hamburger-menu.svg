@@ -1,18 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="30mm" height="28.864mm" version="1.1" viewBox="0 0 30 28.864" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g transform="translate(-52.917 -63.726)" fill="#15293d" stroke-width=".14857">
-  <rect x="52.917" y="63.726" width="30" height="8"/>
-  <rect x="52.917" y="74.158" width="30" height="8"/>
-  <rect x="52.917" y="84.59" width="30" height="8"/>
- </g>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="258.04779mm"
+   height="200.28032mm"
+   version="1.1"
+   viewBox="0 0 258.04779 200.28031"
+   id="svg36"
+   sodipodi:docname="hamburger-menu.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs40" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview38"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.48582721"
+     inkscape:cx="25.922752"
+     inkscape:cy="297.78241"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg36" />
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="matrix(8.6015925,0,0,8.6015925,-455.17047,-548.1451)"
+     id="g34"
+     style="fill:#15293d;stroke-width:0.14857">
+    <rect
+       x="52.917"
+       y="63.726002"
+       width="30"
+       height="5.8215847"
+       id="rect28"
+       rx="2.9221818"
+       ry="2.9221818"
+       style="stroke-width:0.12673797" />
+    <rect
+       style="stroke-width:0.12673797"
+       ry="2.9221818"
+       rx="2.9221818"
+       id="rect42"
+       height="5.8215847"
+       width="30"
+       y="72.72184"
+       x="52.917" />
+    <rect
+       x="52.917"
+       y="81.188515"
+       width="30"
+       height="5.8215847"
+       id="rect44"
+       rx="2.9221818"
+       ry="2.9221818"
+       style="stroke-width:0.12673797" />
+  </g>
 </svg>
