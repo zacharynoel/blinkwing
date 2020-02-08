@@ -14,8 +14,14 @@ const Bar = styled(`div`)`
   height: 344px;
   position: absolute;
   border-radius: 0 0 300px 0;
-  ${({ right }) => right && "left: calc(100vw - 25px);"}
-  ${({ right }) => right && "border-radius: 0 0 0 300px;"}
+  ${({ right }) => right && "left: calc(100% - 25px);"}
+  ${({ right }) =>
+    right &&
+    "border-radius: 0 0 0 300px;"}
+
+  @media only screen and (min-width: 413px) {
+    height: 244px;
+  }
 `
 
 const IndexPage = ({ data }) => (
@@ -37,7 +43,11 @@ const IndexPage = ({ data }) => (
       </Container>
     </div>
 
-    <Container title="Core Technologies" secondary>
+    <Container
+      title="Core Technologies"
+      style={{ padding: "1rem 0.5rem" }}
+      secondary
+    >
       <TechIcons />
     </Container>
 
@@ -57,7 +67,7 @@ export const query = graphql`
   query {
     homeBgImage: file(relativePath: { eq: "home-bg.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, grayscale: false) {
+        fluid(maxWidth: 4831) {
           ...GatsbyImageSharpFluid
         }
       }

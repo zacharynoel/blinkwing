@@ -26,6 +26,10 @@ const LandingContainer = styled(`section`)`
   h2 {
     font-size: 21px;
   }
+
+  @media only screen and (min-width: 1200px) {
+    height: 537px;
+  }
 `
 
 const ImageCover = styled(`div`)`
@@ -38,19 +42,23 @@ const ImageCover = styled(`div`)`
   background: -moz-linear-gradient(
     0deg,
     rgba(22, 42, 62, 1) 0%,
-    rgba(22, 42, 62, 0.44) 100%
+    rgba(22, 42, 62, 0.35) 100%
   );
   background: -webkit-linear-gradient(
     0deg,
     rgba(22, 42, 62, 1) 0%,
-    rgba(22, 42, 62, 0.44) 100%
+    rgba(22, 42, 62, 0.35) 100%
   );
   background: linear-gradient(
     0deg,
     rgba(22, 42, 62, 1) 0%,
-    rgba(22, 42, 62, 0.44) 100%
+    rgba(22, 42, 62, 0.35) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162a3e",endColorstr="#162a3e",GradientType=1);
+
+  @media only screen and (min-width: 1200px) {
+    height: 537px;
+  }
 `
 
 const ButtonsContainer = styled(`div`)`
@@ -63,14 +71,17 @@ const ButtonsContainer = styled(`div`)`
   width: 100%;
 `
 
+const CustomBgImage = styled(BgImage)`
+  height: 437px !important;
+
+  @media only screen and (min-width: 1200px) {
+    height: 537px !important;
+  }
+`
+
 const LandingSection = ({ image }) => (
   <LandingContainer>
-    <BgImage
-      fluid={image.fluid}
-      style={{
-        height: "437px",
-      }}
-    />
+    <CustomBgImage fluid={image.fluid} />
     <ImageCover />
     <h1>Modern, Fast, Responsive Websites</h1>
     <h2>Based in Fresno, we’re ready to build your next web project</h2>

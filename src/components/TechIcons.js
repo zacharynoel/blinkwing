@@ -35,6 +35,16 @@ const IconWrapper = styled(`div`)`
   font-size: 18px;
   font-weight: 400;
   border-radius: 15px;
+  flex: 1 2 1;
+
+  @media only screen and (max-width: 450px) {
+    width: 100px;
+    padding: 10px;
+
+    img {
+      max-height: 80px;
+    }
+  }
 `
 
 const TechIcons = () => (
@@ -51,14 +61,22 @@ const TechIcons = () => (
       <img src={GraphQLLogo} alt="GraphQL" />
       GraphQL
     </IconWrapper>
-    <IconWrapper>
-      <img src={NodeJSLogo} alt="NodeJS" />
-      NodeJS
-    </IconWrapper>
-    <IconWrapper>
-      <img src={JSLogo} alt="JavaScript" />
-      JavaScript
-    </IconWrapper>
+    <div
+      style={{
+        display: "flex",
+        flexFlow: "row wrap",
+        justifyContent: "center",
+      }}
+    >
+      <IconWrapper>
+        <img src={NodeJSLogo} alt="NodeJS" />
+        NodeJS
+      </IconWrapper>
+      <IconWrapper>
+        <img src={JSLogo} alt="JavaScript" />
+        JavaScript
+      </IconWrapper>
+    </div>
   </IconsContainer>
 )
 
