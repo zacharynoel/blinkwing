@@ -7,6 +7,7 @@ import SEO from "components/seo"
 import Container from "components/Container"
 import LandingSection from "components/LandingSection"
 import TechIcons from "components/TechIcons"
+import Button from "components/Button"
 
 const Bar = styled(`div`)`
   background: #162a3e;
@@ -49,6 +50,44 @@ const IndexPage = ({ data }) => (
       secondary
     >
       <TechIcons />
+    </Container>
+
+    <Container
+      title="Get In Touch"
+      style={{
+        background: `#162a3e`,
+        color: `white`,
+      }}
+      contact
+    >
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        style={{
+          display: `flex`,
+          flexDirection: `column`,
+          width: `100%`,
+        }}
+      >
+        <label>
+          Name / Business Name
+          <input type="text" name="name" />
+        </label>
+
+        <label>
+          Email Address
+          <input type="text" name="email" />
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" />
+        </label>
+
+        <Button>Submit</Button>
+      </form>
     </Container>
 
     {/* 
