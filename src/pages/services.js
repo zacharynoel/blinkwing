@@ -5,26 +5,9 @@ import SEO from "components/seo"
 import Container from "components/Container"
 import Button from "components/Button"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import LeftFeather from "images/left-feather-bullet.svg"
 import RightFeather from "images/right-feather-bullet.svg"
-
-const BulletList = styled(`ul`)`
-  font-size: 18px;
-  font-weight: 500;
-  li {
-    padding: 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  img {
-    width: 25px;
-    margin-right: 15px;
-    margin-bottom: auto;
-  }
-`
+import BulletList from "components/BulletList"
 
 const Services = () => (
   <Layout>

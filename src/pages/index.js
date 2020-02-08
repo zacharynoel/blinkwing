@@ -10,6 +10,7 @@ import TechIcons from "components/TechIcons"
 import ContactForm from "components/ContactForm"
 import FeatherIcon from "images/left-feather-bullet.svg"
 import Button from "components/Button"
+import BulletList from "components/BulletList"
 
 const Bar = styled(`div`)`
   background: #162a3e;
@@ -27,22 +28,6 @@ const Bar = styled(`div`)`
   }
 `
 
-const BulletList = styled(`ul`)`
-  font-size: 18px;
-  font-weight: 500;
-
-  li {
-    padding: 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  img {
-    width: 25px;
-    margin-right: 15px;
-  }
-`
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -69,6 +54,8 @@ const IndexPage = ({ data }) => (
     >
       <TechIcons />
     </Container>
+
+    <Container title="Featured Blog Post"></Container>
 
     <Container title="Our Services" secondary>
       <BulletList>
