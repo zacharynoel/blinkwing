@@ -13,20 +13,37 @@ const ContainerStyle = styled.section`
   padding: 1rem 3rem;
 
   ${({ secondary }) => secondary && "background-color: #EDEDED;"}
+  ${({ contact }) => contact && "h2 {color: white;}"}
 
   h2 {
     text-align: center;
   }
   h2,
-  p {
+  p,
+  form {
     padding: 1rem 0;
     margin: 0 auto;
     max-width: 500px;
   }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem;
+  }
+
+  textarea {
+    height: 8rem;
+  }
 `
 
-const Container = ({ title, secondary, children, ...props }) => (
-  <ContainerStyle {...props} secondary={secondary}>
+const Container = ({ title, secondary, contact, children, ...props }) => (
+  <ContainerStyle {...props} secondary={secondary} contact={contact}>
     <h2>{title}</h2>
     {children}
   </ContainerStyle>
