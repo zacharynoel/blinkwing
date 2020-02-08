@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "components/layout"
@@ -8,6 +8,8 @@ import Container from "components/Container"
 import LandingSection from "components/LandingSection"
 import TechIcons from "components/TechIcons"
 import ContactForm from "components/ContactForm"
+import FeatherIcon from "images/left-feather-bullet.svg"
+import Button from "components/Button"
 
 const Bar = styled(`div`)`
   background: #162a3e;
@@ -25,6 +27,22 @@ const Bar = styled(`div`)`
   }
 `
 
+const BulletList = styled(`ul`)`
+  font-size: 18px;
+  font-weight: 500;
+
+  li {
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  img {
+    width: 25px;
+    margin-right: 15px;
+  }
+`
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -52,6 +70,42 @@ const IndexPage = ({ data }) => (
       <TechIcons />
     </Container>
 
+    <Container title="Our Services" secondary>
+      <BulletList>
+        <li>
+          <img src={FeatherIcon} />
+          Web Design and Development
+        </li>
+        <li>
+          <img src={FeatherIcon} />
+          Web Hosting
+        </li>
+        <li>
+          <img src={FeatherIcon} />
+          SEO Services
+        </li>
+        <li>
+          <img src={FeatherIcon} />
+          eCommerce
+        </li>
+        <li>
+          <img src={FeatherIcon} />
+          Content Management System
+        </li>
+        <li>
+          <img src={FeatherIcon} />
+          Logo Design and Rebranding
+        </li>
+        <li>
+          <img src={FeatherIcon} />
+          Software Consulting
+        </li>
+      </BulletList>
+      <Link to="/services">
+        <Button>{`View Pricing & More Info`}</Button>
+      </Link>
+    </Container>
+
     <Container
       title="Get In Touch"
       style={{
@@ -67,8 +121,6 @@ const IndexPage = ({ data }) => (
       TODO: Home sections still needing to be added
       Followed by...
       - Featured Blog Post
-      - Our Services (list with feather bullets)
-      - Contact form
     */}
   </Layout>
 )
