@@ -10,10 +10,10 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg8"
    version="1.1"
-   viewBox="0 0 132.29167 132.29167"
-   height="132.29167mm"
-   width="132.29167mm"
-   sodipodi:docname="graphql logo.svg"
+   viewBox="0 0 68.311759 76.687888"
+   height="76.687889mm"
+   width="68.31176mm"
+   sodipodi:docname="graphql-logo.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -33,12 +33,12 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.5946522"
-     inkscape:cx="492.69561"
-     inkscape:cy="160.2358"
+     inkscape:cx="15.2778"
+     inkscape:cy="31.614619"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g62" />
+     inkscape:current-layer="svg8" />
   <defs
      id="defs2">
     <pattern
@@ -70,34 +70,21 @@
     </rdf:RDF>
   </metadata>
   <rect
-     ry="15"
-     rx="15"
-     y="4.9737992e-14"
-     x="-2.3705545e-06"
-     height="132.29167"
-     width="132.29167"
+     y="1.1943936e-07"
+     x="3.2494019e-05"
+     height="76.687889"
+     width="68.311707"
      id="rect842"
-     style="opacity:1;fill:#162a3e;fill-opacity:1;stroke:none;stroke-width:0.64662141;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     style="opacity:1;fill:#162a3e;fill-opacity:1;stroke:none;stroke-width:0.35377616;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <g
      id="g62"
-     transform="translate(-1.8928915e-6,-0.03264522)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:22.82233047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.57055831"
-       x="13.868971"
-       y="118.21004"
-       id="text1902"><tspan
-         id="tspan1900"
-         x="13.868971"
-         y="118.21004"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.82225227px;font-family:Montserrat;-inkscape-font-specification:'Montserrat,  weight=280';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.57055831">GraphQL</tspan></text>
-  </g>
+     transform="translate(-31.98995,-27.834535)" />
   <g
      id="layer1"
-     transform="translate(-45.357159,-61.898808)" />
+     transform="translate(-77.347107,-89.700697)" />
   <g
      id="g921"
-     transform="matrix(1.3129395,0,0,1.3129395,-228.28335,-47.662976)"
+     transform="matrix(1.3129395,0,0,1.3129395,-260.2733,-61.181178)"
      style="fill:#ffffff;fill-opacity:1">
     <path
        style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"

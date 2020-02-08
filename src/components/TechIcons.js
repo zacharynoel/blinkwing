@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import ReactLogo from "images/react-icon.png"
-import GatsbyLogo from "images/gatsby-icon.png"
-import GraphQLLogo from "images/graphql-icon.png"
-import NodeJSLogo from "images/nodejs-icon.png"
-import JSLogo from "images/js-icon.png"
+import ReactLogo from "images/react-logo.svg"
+import GatsbyLogo from "images/gatsby-logo.svg"
+import GraphQLLogo from "images/graphql-logo.svg"
+import NodeJSLogo from "images/nodejs-logo.svg"
+import JSLogo from "images/js-logo.svg"
 
 const IconsContainer = styled(`div`)`
   display: flex;

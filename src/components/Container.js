@@ -13,7 +13,7 @@ const ContainerStyle = styled.section`
   padding: 1rem 3rem;
 
   ${({ secondary }) => secondary && "background-color: #EDEDED;"}
-  ${({ contact }) => contact && "h2 {color: white;}"}
+  ${({ contact }) => contact && "h2, p {color: white;}"}
 
   h2 {
     text-align: center;
@@ -51,12 +51,14 @@ const Container = ({ title, secondary, contact, children, ...props }) => (
 
 Container.propTypes = {
   secondary: PropTypes.bool.isRequired,
+  contact: PropTypes.bool.isRequired,
   children: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
 Container.defaultProps = {
   secondary: false,
+  contact: false,
   title: ``,
 }
 
