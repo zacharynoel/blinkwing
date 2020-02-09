@@ -3,21 +3,14 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import BulletListItem from "./BulletListItem"
 
-const CustomUl = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: space-between;
-`
-
 const BulletList = ({ list, type }) => (
-  <CustomUl>
+  <ul>
     {list.map((item, index) => (
       <BulletListItem type={type} key={index}>
         {item}
       </BulletListItem>
     ))}
-  </CustomUl>
+  </ul>
 )
 
 BulletList.propTypes = {
