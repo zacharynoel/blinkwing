@@ -46,7 +46,10 @@ const IndexPage = ({ data }) => (
       <Bar />
       <Bar right />
 
-      <Container title="Modern Tech To Our Advantage">
+      <Container
+        title="Modern Tech To Our Advantage"
+        style={{ padding: "1rem 3rem" }}
+      >
         <p>
           Tech can only advance through better development practices. This is
           why at Blinkwing we pride ourselves in always staying up-to-date on
