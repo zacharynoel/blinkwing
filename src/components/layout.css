@@ -101,6 +101,11 @@ h2 {
   font-size: 21px;
 }
 
+h3 {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
 /* */
 
 @media only screen and (min-width: 700px) {

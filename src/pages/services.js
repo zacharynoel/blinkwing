@@ -5,84 +5,41 @@ import SEO from "components/seo"
 import Container from "components/Container"
 import Button from "components/Button"
 import { Link } from "gatsby"
-import LeftFeather from "images/left-feather-bullet.svg"
-import RightFeather from "images/right-feather-bullet.svg"
 import BulletList from "components/BulletList"
+
+const METHODS_LIST = [
+  "You define the requirements for your project, we provide a quote for the price and timeframe. We also discuss plans for domain registration and hosting your website.",
+  "Once we come to an agreement, a contract is formed and we begin our work.",
+  "As we design your product, you will see the progress after each milestone - from wireframing to the full design.",
+  "After the full design is approved, we begin development.",
+  "Once your project is complete and final approval is given, your site is launched!",
+]
+
+const SERVICES_LIST = [
+  "Web Design and Development",
+  "Web Hosting",
+  "SEO Services",
+  "eCommerce",
+  "Content Management System",
+  "Logo Design and Rebranding",
+  "Software Consulting",
+]
 
 const Services = () => (
   <Layout>
     <SEO title="Services" />
-    <Container title="Services">
-      <h4 style={{ padding: `1rem` }}>Here&apos;s the Blinkwing Method</h4>
+    <Container title="Services" style={{ maxWidth: "700px" }}>
+      <h3 style={{ padding: `1rem` }}>{`Here's the Blinkwing Method`}</h3>
 
-      <p style={{ width: `100%` }}>
-        <BulletList>
-          <li>
-            <img src={RightFeather} />
-            You define the requirements for your project, we provide a quote for
-            the price and timeframe. We also discuss plans for domain
-            registration and hosting your website.
-          </li>
-          <li>
-            <img src={RightFeather} />
-            Once we come to an agreement, a contract is formed and we begin our
-            work.
-          </li>
-          <li>
-            <img src={RightFeather} />
-            As we design your product, you will see the progress after each
-            milestone - from wireframing to the full design.
-          </li>
-          <li>
-            <img src={RightFeather} />
-            After the full design is approved, we begin development.
-          </li>
-          <li>
-            <img src={RightFeather} />
-            Once your project is complete and final approval is given, your site
-            is launched!
-          </li>
-        </BulletList>
-      </p>
+      <BulletList type={2} list={METHODS_LIST} />
 
-      <h4 style={{ padding: `1rem` }}>What We Offer</h4>
+      <h3 style={{ padding: `1rem` }}>What We Offer</h3>
 
-      <p style={{ width: `100%` }}>
-        <BulletList>
-          <li>
-            <img src={LeftFeather} />
-            Web Design and Development
-          </li>
-          <li>
-            <img src={LeftFeather} />
-            Web Hosting
-          </li>
-          <li>
-            <img src={LeftFeather} />
-            SEO Services
-          </li>
-          <li>
-            <img src={LeftFeather} />
-            eCommerce
-          </li>
-          <li>
-            <img src={LeftFeather} />
-            Content Management System
-          </li>
-          <li>
-            <img src={LeftFeather} />
-            Logo Design and Rebranding
-          </li>
-          <li>
-            <img src={LeftFeather} />
-            Software Consulting
-          </li>
-        </BulletList>
-      </p>
+      <BulletList list={SERVICES_LIST} />
     </Container>
 
-    <Container title="Pricing">
-      <p style={{ width: `100%` }}>
+    <Container title="Pricing" style={{ maxWidth: "700px" }}>
+      <p>
         Pricing is determined by the size and scope of your project, however our
         starting prices are listed here:
         <br />
@@ -96,8 +53,8 @@ const Services = () => (
         Logo design <b>starting from $200</b>
         <br />
         <br />
-        If you have any questions about our pricing or want an exact quote,
-        please contact us so that we can discuss your project&apos;s needs.
+        {`If you have any questions about our pricing or want an exact quote,
+        please contact us so that we can discuss your project's needs.`}
       </p>
 
       <Link to="/contact" style={{ padding: 50 }}>
