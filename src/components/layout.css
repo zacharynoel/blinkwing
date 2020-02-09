@@ -20,7 +20,12 @@ main {
   overflow-x: hidden;
 }
 
-.logo {
+.logo-nav {
+  max-height: 50px;
+  max-width: 70%;
+}
+
+.logo-footer {
   max-height: 50px;
 }
 
@@ -46,7 +51,7 @@ header {
 
 .hamburger-menu {
   order: 1;
-  max-height: 30px;
+  max-height: 20px;
 }
 
 .nav-links li {
@@ -70,7 +75,9 @@ footer {
 }
 
 .foot-links {
+  display: flex;
   font-size: 0.8rem;
+  flex-wrap: nowrap;
 }
 
 .nav-links-collapse li {
@@ -112,6 +119,10 @@ h3 {
   header .hamburger-menu,
   .nav-links-collapse li {
     display: none;
+  }
+
+  .logo-nav {
+    max-width: 100%;
   }
 
   .nav-links li {
