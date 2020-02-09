@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           <NavLinks className="foot-links" />
           Privacy Policy | © {new Date().getFullYear()} Blinkwing
           <Link to="/">
-            <img src={Logo} className="logo" alt="Blinkwing" />
+            <img src={Logo} className="logo-footer" alt="Blinkwing" />
           </Link>
         </footer>
       </div>
