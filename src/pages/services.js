@@ -44,25 +44,25 @@ const Services = () => (
     </Container>
 
     <Container title="Pricing" style={{ maxWidth: 500 }}>
-      <p style={{ maxWidth: 500, fontSize: 16 }}>
-        Pricing is determined by the size and scope of your project, however our
-        starting prices are listed here:
-        <br />
-        <br />
-        Website design/development <b>starting from $500</b>
-        <br />
-        <br />
-        Website hosting <b>starting from $50/month</b>
-        <br />
-        <br />
-        Logo design <b>starting from $200</b>
-        <br />
-        <br />
-        {`If you have any questions about our pricing or want an exact quote,
-        please contact us so that we can discuss your project's needs.`}
-      </p>
+      <div>
+        <p>
+          Pricing is determined by the size and scope of your project, however
+          our starting prices are listed here:
+        </p>
+        <p>
+          Website design/development <b>starting from $500</b>
+        </p>
+        <p>
+          Website hosting <b>starting from $50/month</b>
+        </p>
+        <p>
+          Logo design <b>starting from $200</b>
+        </p>
+        <p>{`If you have any questions about our pricing or want an exact quote,
+        please contact us so that we can discuss your project's needs.`}</p>
+      </div>
 
-      <Link to="/contact" style={{ margin: "30px auto" }}>
+      <Link to="/contact" style={{ margin: "30px auto", textAlign: "center" }}>
         <Button>Get in Touch</Button>
       </Link>
     </Container>

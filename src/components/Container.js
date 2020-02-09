@@ -10,7 +10,8 @@ const ContainerStyle = styled.section`
   font-family: "Montserrat", sans-serif;
   justify-content: space-around;
   flex-wrap: nowrap;
-  padding: 1rem 3rem;
+  padding: 1rem;
+  margin: 0 auto;
 
   ${({ secondary }) => secondary && "background-color: #EDEDED;"}
   ${({ contact }) => contact && "h2, p {color: white;}"}

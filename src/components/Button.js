@@ -17,15 +17,21 @@ const ButtonContainer = styled.button`
   font-weight: bold;
   font-size: 1.3em;
   width: 19rem;
-  max-width: calc(100vw - 20px);
+  max-width: 100%;
   padding: 13px 0;
   margin: 1rem auto;
+  text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   outline: none;
   cursor: pointer;
 
   ${({ secondary }) => secondary && "background-color: white;"}
-  ${({ secondary }) => secondary && "color: #3C7BBA;"}
+  ${({ secondary }) =>
+    secondary && "color: #3C7BBA;"}
+
+  @media only screen and (max-width: 340px) {
+    width: 85vw;
+  }
 `
 
 const Button = ({ secondary, children, ...props }) => {
