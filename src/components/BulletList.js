@@ -1,10 +1,9 @@
 import React from "react"
-import styled from "styled-components"
 import PropTypes from "prop-types"
 import BulletListItem from "./BulletListItem"
 
-const BulletList = ({ list, type }) => (
-  <ul>
+const BulletList = ({ list, type, style }) => (
+  <ul style={style}>
     {list.map((item, index) => (
       <BulletListItem type={type} key={index}>
         {item}
@@ -16,6 +15,7 @@ const BulletList = ({ list, type }) => (
 BulletList.propTypes = {
   list: PropTypes.array.isRequired,
   type: PropTypes.number,
+  style: PropTypes.object,
 }
 
 BulletList.defaultProps = {

@@ -28,18 +28,23 @@ const SERVICES_LIST = [
 const Services = () => (
   <Layout>
     <SEO title="Services" />
-    <Container title="Services" style={{ maxWidth: "700px" }}>
-      <h3 style={{ padding: `1rem` }}>{`Here's the Blinkwing Method`}</h3>
+    <Container title="Services" style={{ maxWidth: 500 }}>
+      <h3
+        style={{ padding: `1rem 0 1.5rem` }}
+      >{`Here's the Blinkwing Method`}</h3>
 
       <BulletList type={2} list={METHODS_LIST} />
 
-      <h3 style={{ padding: `1rem` }}>What We Offer</h3>
+      <h3 style={{ padding: `2rem 0 1.5rem` }}>What We Offer</h3>
 
-      <BulletList list={SERVICES_LIST} />
+      <BulletList
+        list={SERVICES_LIST}
+        style={{ width: "100%", textAlign: "left" }}
+      />
     </Container>
 
-    <Container title="Pricing" style={{ maxWidth: "700px" }}>
-      <p>
+    <Container title="Pricing" style={{ maxWidth: 500 }}>
+      <p style={{ maxWidth: 500 }}>
         Pricing is determined by the size and scope of your project, however our
         starting prices are listed here:
         <br />
@@ -57,7 +62,7 @@ const Services = () => (
         please contact us so that we can discuss your project's needs.`}
       </p>
 
-      <Link to="/contact" style={{ padding: 50 }}>
+      <Link to="/contact" style={{ margin: "30px auto" }}>
         <Button>Get in Touch</Button>
       </Link>
     </Container>
