@@ -15,6 +15,7 @@ const ContainerStyle = styled.section`
 
   ${({ secondary }) => secondary && "background-color: #EDEDED;"}
   ${({ contact }) => contact && "h2, p {color: white;}"}
+  ${({ noTitle }) => noTitle && "h2 {display: none;"}
 
   h2 {
     text-align: center;
@@ -43,8 +44,20 @@ const ContainerStyle = styled.section`
   }
 `
 
-const Container = ({ title, secondary, contact, children, ...props }) => (
-  <ContainerStyle {...props} secondary={secondary} contact={contact}>
+const Container = ({
+  title,
+  secondary,
+  noTitle,
+  contact,
+  children,
+  ...props
+}) => (
+  <ContainerStyle
+    {...props}
+    secondary={secondary}
+    contact={contact}
+    noTitle={noTitle}
+  >
     <h2>{title}</h2>
     {children}
   </ContainerStyle>
@@ -53,6 +66,7 @@ const Container = ({ title, secondary, contact, children, ...props }) => (
 Container.propTypes = {
   secondary: PropTypes.bool.isRequired,
   contact: PropTypes.bool.isRequired,
+  noTitle: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
 }
@@ -60,6 +74,7 @@ Container.propTypes = {
 Container.defaultProps = {
   secondary: false,
   contact: false,
+  noTitle: false,
   title: "",
 }
 
