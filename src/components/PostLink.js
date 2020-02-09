@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Container from "components/Container"
 import Image from "gatsby-image"
+import PropTypes from "prop-types"
 
 const PostLink = ({ post }) => (
   <div style={{ padding: `0.5rem` }}>
@@ -42,5 +43,9 @@ const PostLink = ({ post }) => (
     </Link>
   </div>
 )
+
+PostLink.propTypes = {
+  post: PropTypes.node.isRequired,
+}
 
 export default PostLink

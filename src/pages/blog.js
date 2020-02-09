@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import PostLink from "components/PostLink"
-
+import PropTypes from "prop-types"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Container from "components/Container"
@@ -24,6 +24,10 @@ const Blog = ({
       </Container>
     </Layout>
   )
+}
+
+Blog.propTypes = {
+  data: PropTypes.node.isRequired,
 }
 
 export default Blog

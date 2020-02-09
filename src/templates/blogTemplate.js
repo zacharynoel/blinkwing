@@ -5,7 +5,7 @@ import Container from "components/Container"
 import { Link } from "gatsby"
 import Button from "components/Button"
 import Image from "gatsby-image"
-import { node } from "prop-types"
+import PropTypes from "prop-types"
 
 const Template = ({ data }) => {
   const { markdownRemark } = data
@@ -35,6 +35,10 @@ const Template = ({ data }) => {
       </Container>
     </Layout>
   )
+}
+
+Template.propTypes = {
+  data: PropTypes.node.isRequired,
 }
 
 export default Template
