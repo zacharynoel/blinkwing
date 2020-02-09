@@ -1,9 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import BgImage from "components/BgImage"
 import Button from "components/Button"
+import PropTypes from "prop-types"
 
 const LandingContainer = styled(`section`)`
   position: relative;
@@ -95,5 +96,9 @@ const LandingSection = ({ image }) => (
     </ButtonsContainer>
   </LandingContainer>
 )
+
+LandingSection.propTypes = {
+  image: PropTypes.node.isRequired,
+}
 
 export default LandingSection

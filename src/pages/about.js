@@ -6,6 +6,7 @@ import Layout from "components/layout"
 import SEO from "components/seo"
 import Container from "components/Container"
 import TechIcons from "components/TechIcons"
+import PropTypes from "prop-types"
 
 const About = ({ data }) => (
   <Layout>
@@ -52,6 +53,10 @@ const About = ({ data }) => (
     </Container>
   </Layout>
 )
+
+About.propTypes = {
+  data: PropTypes.node.isRequired,
+}
 
 export default About
 

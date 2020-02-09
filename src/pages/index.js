@@ -10,6 +10,7 @@ import TechIcons from "components/TechIcons"
 import ContactForm from "components/ContactForm"
 import Button from "components/Button"
 import BulletList from "components/BulletList"
+import PropTypes from "prop-types"
 
 const Bar = styled(`div`)`
   background: #162a3e;
@@ -95,6 +96,10 @@ const IndexPage = ({ data }) => (
     */}
   </Layout>
 )
+
+IndexPage.propTypes = {
+  data: PropTypes.node.isRequired,
+}
 
 export default IndexPage
 
