@@ -44,7 +44,7 @@ const Services = () => (
     </Container>
 
     <Container title="Pricing" style={{ maxWidth: 500 }}>
-      <p style={{ maxWidth: 500 }}>
+      <p style={{ maxWidth: 500, fontSize: 16 }}>
         Pricing is determined by the size and scope of your project, however our
         starting prices are listed here:
         <br />
