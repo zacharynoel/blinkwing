@@ -1,28 +1,33 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import BulletListItem from "./BulletListItem"
 
-const BulletStyle = styled(`ul`)`
-  font-size: 18px;
-  font-weight: 500;
-  li {
-    padding: 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  img {
-    width: 25px;
-    margin-right: 15px;
-    margin-bottom: auto;
-  }
+const CustomUl = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: space-between;
 `
 
-const BulletList = ({ children }) => <BulletStyle>{children}</BulletStyle>
+const BulletList = ({ list, type }) => (
+  <CustomUl>
+    {list.map((item, index) => (
+      <BulletListItem type={type} key={index}>
+        {item}
+      </BulletListItem>
+    ))}
+  </CustomUl>
+)
 
 BulletList.propTypes = {
-  children: PropTypes.node.isRequired,
+  list: PropTypes.array.isRequired,
+  type: PropTypes.number,
+}
+
+BulletList.defaultProps = {
+  list: [],
+  type: 1,
 }
 
 export default BulletList

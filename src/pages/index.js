@@ -8,7 +8,6 @@ import Container from "components/Container"
 import LandingSection from "components/LandingSection"
 import TechIcons from "components/TechIcons"
 import ContactForm from "components/ContactForm"
-import FeatherIcon from "images/left-feather-bullet.svg"
 import Button from "components/Button"
 import BulletList from "components/BulletList"
 
@@ -27,6 +26,16 @@ const Bar = styled(`div`)`
     height: 244px;
   }
 `
+
+const SERVICES_LIST = [
+  "Web Design and Development",
+  "Web Hosting",
+  "SEO Services",
+  "eCommerce",
+  "Content Management System",
+  "Logo Design and Rebranding",
+  "Software Consulting",
+]
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -55,39 +64,11 @@ const IndexPage = ({ data }) => (
       <TechIcons />
     </Container>
 
-    <Container title="Featured Blog Post"></Container>
+    <Container title="Featured Blog Post">{"something"}</Container>
 
     <Container title="Our Services" secondary>
-      <BulletList>
-        <li>
-          <img src={FeatherIcon} />
-          Web Design and Development
-        </li>
-        <li>
-          <img src={FeatherIcon} />
-          Web Hosting
-        </li>
-        <li>
-          <img src={FeatherIcon} />
-          SEO Services
-        </li>
-        <li>
-          <img src={FeatherIcon} />
-          eCommerce
-        </li>
-        <li>
-          <img src={FeatherIcon} />
-          Content Management System
-        </li>
-        <li>
-          <img src={FeatherIcon} />
-          Logo Design and Rebranding
-        </li>
-        <li>
-          <img src={FeatherIcon} />
-          Software Consulting
-        </li>
-      </BulletList>
+      <BulletList list={SERVICES_LIST} />
+
       <Link to="/services">
         <Button>{`View Pricing & More Info`}</Button>
       </Link>
