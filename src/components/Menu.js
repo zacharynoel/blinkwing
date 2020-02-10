@@ -31,30 +31,45 @@ const Container = styled(`ul`)`
     width: 100%;
     text-align: center;
   }
+
+  @media only screen and (min-width: 700px) {
+    display: none;
+  }
 `
 
-const Menu = ({ menuOpen }) => (
-  <Container open={menuOpen}>
+const Menu = ({ menuOpen, setMenuOpen }) => (
+  <Container open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
     <li>
-      <Link to="/">Home</Link>
+      <Link to="/">
+        <div style={{ width: "100%", height: "100%" }}>Home</div>
+      </Link>
     </li>
     <li>
-      <Link to="/services">Services</Link>
+      <Link to="/services">
+        <div style={{ width: "100%", height: "100%" }}>Services</div>
+      </Link>
     </li>
     <li>
-      <Link to="/about">About</Link>
+      <Link to="/about">
+        <div style={{ width: "100%", height: "100%" }}>About</div>
+      </Link>
     </li>
     <li>
-      <Link to="/blog">Blog</Link>
+      <Link to="/blog">
+        <div style={{ width: "100%", height: "100%" }}>Blog</div>
+      </Link>
     </li>
     <li>
-      <Link to="/contact">Contact</Link>
+      <Link to="/contact">
+        <div style={{ width: "100%", height: "100%" }}>Contact</div>
+      </Link>
     </li>
   </Container>
 )
 
 Menu.propTypes = {
   menuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 }
 
 export default Menu

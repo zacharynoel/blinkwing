@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
           siteTitle={data.site.siteMetadata.title}
         />
         <Main menuOpen={menuOpen}>
-          <Menu menuOpen={menuOpen} />
+          <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           {children}
         </Main>
         <footer>
