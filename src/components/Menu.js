@@ -31,6 +31,10 @@ const Container = styled(`ul`)`
     width: 100%;
     text-align: center;
   }
+
+  @media only screen and (min-width: 700px) {
+    display: none;
+  }
 `
 
 const Menu = ({ menuOpen }) => (
