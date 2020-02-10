@@ -31,7 +31,7 @@ const ContactForm = () => (
       <textarea name="message" />
     </label>
 
-    <Button>Submit</Button>
+    <Button style={{ margin: "1rem auto 0.5rem" }}>Submit</Button>
   </form>
 )
 

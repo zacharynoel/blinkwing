@@ -1,20 +1,26 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Header from "./header"
+import styled from "styled-components"
 import "./layout.css"
-import Logo from "../images/full-logo.svg"
+import Logo from "images/full-logo.svg"
 import NavLinks from "./NavLinks"
+import Menu from "./Menu"
+
+const Main = styled(`main`)`
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-flow: column nowrap;
+  width: 100%;
+  position: relative;
+`
 
 const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,8 +34,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="wrapper">
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
+        <Header
+          setMenuOpen={setMenuOpen}
+          menuOpen={menuOpen}
+          siteTitle={data.site.siteMetadata.title}
+        />
+        <Main menuOpen={menuOpen}>
+          <Menu menuOpen={menuOpen} />
+          {children}
+        </Main>
         <footer>
           <NavLinks className="foot-links" />
           Privacy Policy | © {new Date().getFullYear()} Blinkwing
