@@ -49,6 +49,7 @@ const Header = ({ setMenuOpen, menuOpen }) => (
 
     <Nav />
     <MenuButton
+      menuOpen={menuOpen}
       onClick={() => {
         setMenuOpen(!menuOpen)
       }}
