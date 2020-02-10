@@ -19,7 +19,7 @@ const ButtonContainer = styled.button`
   width: 19rem;
   max-width: 100%;
   padding: 13px 0;
-  margin: 1rem auto;
+  margin: 0 auto;
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
   outline: none;

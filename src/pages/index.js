@@ -74,7 +74,9 @@ const IndexPage = ({ data }) => (
       <BulletList list={SERVICES_LIST} />
 
       <Link to="/services">
-        <Button>{`View Pricing & More Info`}</Button>
+        <Button
+          style={{ margin: "1rem auto" }}
+        >{`View Pricing & More Info`}</Button>
       </Link>
     </Container>
 
@@ -98,7 +100,7 @@ const IndexPage = ({ data }) => (
 )
 
 IndexPage.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default IndexPage

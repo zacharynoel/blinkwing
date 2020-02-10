@@ -1,9 +1,16 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
-const NavLinks = props => (
-  <ul className={props.className}>
+const Container = styled(`ul`)`
+  li {
+    display: inline-flex;
+    padding: 0px 10px;
+  }
+`
+
+const Nav = () => (
+  <Container className="nav">
     <li>
       <Link to="/">Home</Link>
     </li>
@@ -19,11 +26,7 @@ const NavLinks = props => (
     <li>
       <Link to="/contact">Contact</Link>
     </li>
-  </ul>
+  </Container>
 )
 
-NavLinks.propTypes = {
-  className: PropTypes.node.isRequired,
-}
-
-export default NavLinks
+export default Nav

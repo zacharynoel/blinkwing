@@ -1,32 +1,64 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Logo from "../images/full-logo.svg"
-import Hamburger from "../images/hamburger-menu.svg"
-import NavLinks from "./NavLinks"
+import styled from "styled-components"
 
-const Header = () => (
-  <>
-    <header>
+import Logo from "images/full-logo.svg"
+import Nav from "./Nav"
+import MenuButton from "./MenuButton"
+
+const Container = styled(`header`)`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  z-index: 10;
+
+  .logo-nav {
+    max-width: 70%;
+    max-height: 60px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+
+  @media only screen and (min-width: 700px) {
+    .mobileNav {
+      display: none;
+    }
+
+    .nav {
+      display: flex;
+    }
+  }
+`
+
+const Header = ({ setMenuOpen, menuOpen }) => (
+  <Container>
+    <div>
       <Link to="/">
         <img src={Logo} className="logo-nav" alt="Blinkwing" />
       </Link>
+    </div>
 
-      <img src={Hamburger} className="hamburger-menu" alt="Blinkwing" />
-
-      <NavLinks className="nav-links" />
-    </header>
-
-    <NavLinks className="nav-links-collapse" />
-  </>
+    <Nav />
+    <MenuButton
+      onClick={() => {
+        setMenuOpen(!menuOpen)
+      }}
+    />
+  </Container>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  setMenuOpen: PropTypes.func.isRequired,
+  menuOpen: PropTypes.bool.isRequired,
 }
 
 export default Header

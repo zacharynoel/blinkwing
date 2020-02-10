@@ -98,7 +98,7 @@ const LandingSection = ({ image }) => (
 )
 
 LandingSection.propTypes = {
-  image: PropTypes.node.isRequired,
+  image: PropTypes.object.isRequired,
 }
 
 export default LandingSection
