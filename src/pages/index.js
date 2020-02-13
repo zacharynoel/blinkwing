@@ -11,6 +11,7 @@ import ContactForm from "components/ContactForm"
 import Button from "components/Button"
 import BulletList from "components/BulletList"
 import PropTypes from "prop-types"
+import Image from "gatsby-image"
 
 const Bar = styled(`div`)`
   background: #162a3e;
@@ -68,7 +69,39 @@ const IndexPage = ({ data }) => (
       <TechIcons />
     </Container>
 
-    <Container title="Featured Blog Post">{"something"}</Container>
+    <Container title="Featured Blog Post">
+      <Link to={data.markdownRemark.frontmatter.path}>
+        <Container
+          noTitle
+          style={{
+            background: `#162a3e`,
+            color: `white`,
+            maxWidth: `50vh`,
+            borderRadius: `30px 30px 30px 30px`,
+          }}
+        >
+          <div>
+            <div style={{ paddingBottom: `0.7rem`, fontWeight: `bold` }}>
+              {data.markdownRemark.frontmatter.title}
+            </div>
+            <div style={{ paddingBottom: `1rem`, fontWeight: `normal` }}>
+              {data.markdownRemark.frontmatter.date}
+            </div>
+          </div>
+
+          <Image
+            fluid={
+              data.markdownRemark.frontmatter.featuredImage.childImageSharp
+                .fluid
+            }
+            style={{
+              width: `90%`,
+              height: `90%`,
+            }}
+          />
+        </Container>
+      </Link>
+    </Container>
 
     <Container title="Our Services" secondary>
       <BulletList list={SERVICES_LIST} />
@@ -111,6 +144,21 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 4831) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    markdownRemark {
+      excerpt(pruneLength: 250)
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        path
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
