@@ -61,7 +61,7 @@ const Burger = styled(`div`)`
 `
 
 const MenuButton = ({ onClick, menuOpen }) => (
-  <div className="mobileNav" onClick={onClick}>
+  <div className="menuButton" onClick={onClick}>
     <Burger open={menuOpen}>
       <div></div>
       <div></div>

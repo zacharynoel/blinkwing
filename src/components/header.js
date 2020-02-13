@@ -24,12 +24,12 @@ const Container = styled(`header`)`
     display: none;
   }
 
-  .mobileNav {
+  .menuButton {
     display: flex;
   }
 
   @media only screen and (min-width: 700px) {
-    .mobileNav {
+    .menuButton {
       display: none;
     }
 
