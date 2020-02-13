@@ -7,38 +7,25 @@ import PropTypes from "prop-types"
 const PostLink = ({ post }) => (
   <div style={{ padding: `0.5rem` }}>
     <Link to={post.frontmatter.path}>
-      <Container
-        noTitle
-        secondary
-        style={{
-          flexDirection: `row`,
-          width: `100%`,
-          maxWidth: `100vh`,
-        }}
-      >
-        <div>
-          <Image
-            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-            style={{
-              maxWidth: `100px`,
-            }}
-          />
-
-          <div style={{ fontSize: `1rem` }}>{post.frontmatter.title}</div>
-
-          <div style={{ fontSize: `0.7rem` }}>{post.frontmatter.date}</div>
+      <Container noTitle secondary>
+        <div style={{ textAlign: `center` }}>
+          <div style={{ textDecoration: `underline`, paddingBottom: `0.7rem` }}>
+            {post.frontmatter.title}
+          </div>
+          <div style={{ paddingBottom: `1rem`, fontWeight: `normal` }}>
+            {post.frontmatter.date}
+          </div>
         </div>
 
-        <div
+        <Image
+          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
           style={{
-            fontSize: `1rem`,
-            paddingLeft: `2rem`,
-            fontWeight: `normal`,
-            width: `100%`,
+            width: `30vh`,
+            height: `30vh`,
           }}
-        >
-          {post.excerpt}
-        </div>
+        />
+
+        <p style={{ fontWeight: `normal` }}>{post.excerpt}</p>
       </Container>
     </Link>
   </div>
