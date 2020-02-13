@@ -1,6 +1,6 @@
 describe("Viewport", () => {
   beforeEach(() => {
-    cy.visit("localhost:8000")
+    cy.visit("/")
   })
 
   it("cy.viewport() - set the viewport size and dimension", () => {
