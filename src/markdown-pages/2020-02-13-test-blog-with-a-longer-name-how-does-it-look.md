@@ -1,5 +1,5 @@
 ---
-path: /blog/
+path: /blog/test-blog-with-a-longer-name
 title: 'Test Blog With A Longer Name: How Does It Look?'
 date: 2020-02-13T00:55:00.567Z
 featuredImage: /src/images/home-bg.jpg
