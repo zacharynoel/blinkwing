@@ -1,4 +1,4 @@
-describe("app works", () => {
+describe("website", () => {
   it("works", () => {
     cy.visit("/")
   })
