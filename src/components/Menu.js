@@ -38,7 +38,11 @@ const Container = styled(`ul`)`
 `
 
 const Menu = ({ menuOpen, setMenuOpen }) => (
-  <Container open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+  <Container
+    className="menu"
+    open={menuOpen}
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
     <li>
       <Link to="/">
         <div style={{ width: "100%", height: "100%" }}>Home</div>
