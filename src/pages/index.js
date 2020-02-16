@@ -70,37 +70,40 @@ const IndexPage = ({ data }) => (
     </Container>
 
     <Container title="Featured Blog Post">
-      <Link to={data.markdownRemark.frontmatter.path}>
-        <Container
-          noTitle
-          style={{
-            background: `#162a3e`,
-            color: `white`,
-            maxWidth: `50vh`,
-            borderRadius: `30px 30px 30px 30px`,
-          }}
-        >
-          <div>
-            <div style={{ paddingBottom: `0.7rem`, fontWeight: `bold` }}>
-              {data.markdownRemark.frontmatter.title}
-            </div>
-            <div style={{ paddingBottom: `1rem`, fontWeight: `normal` }}>
-              {data.markdownRemark.frontmatter.date}
-            </div>
-          </div>
+      <div style={{ padding: `0.5rem` }}>
+        {data.allMarkdownRemark.edges.map(post => (
+          <Link to={post.node.frontmatter.path} key={post.node.id}>
+            <Container
+              noTitle
+              style={{
+                background: `#162a3e`,
+                color: `white`,
+                borderRadius: `30px 30px 30px 30px`,
+                boxShadow: `5px 5px 5px #6f798f`,
+              }}
+            >
+              <div>
+                <div style={{ paddingBottom: `0.7rem`, fontWeight: `bold` }}>
+                  {post.node.frontmatter.title}
+                </div>
+                <div style={{ paddingBottom: `1rem`, fontWeight: `normal` }}>
+                  {post.node.frontmatter.date}
+                </div>
+              </div>
 
-          <Image
-            fluid={
-              data.markdownRemark.frontmatter.featuredImage.childImageSharp
-                .fluid
-            }
-            style={{
-              width: `90%`,
-              height: `90%`,
-            }}
-          />
-        </Container>
-      </Link>
+              <Image
+                fluid={
+                  post.node.frontmatter.featuredImage.childImageSharp.fluid
+                }
+                style={{
+                  width: `30vh`,
+                  height: `30vh`,
+                }}
+              />
+            </Container>
+          </Link>
+        ))}
+      </div>
     </Container>
 
     <Container title="Our Services" secondary>
@@ -147,16 +150,23 @@ export const query = graphql`
         }
       }
     }
-    markdownRemark {
-      excerpt(pruneLength: 250)
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        path
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
+    allMarkdownRemark(
+      limit: 1
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }

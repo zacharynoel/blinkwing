@@ -7,7 +7,14 @@ import PropTypes from "prop-types"
 const PostLink = ({ post }) => (
   <div style={{ padding: `0.5rem` }}>
     <Link to={post.frontmatter.path}>
-      <Container noTitle secondary>
+      <Container
+        noTitle
+        secondary
+        style={{
+          borderRadius: `30px 30px 30px 30px`,
+          boxShadow: `5px 5px 5px #c2c2c2`,
+        }}
+      >
         <div style={{ textAlign: `center` }}>
           <div style={{ textDecoration: `underline`, paddingBottom: `0.7rem` }}>
             {post.frontmatter.title}
