@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import PostLink from "components/PostLink"
+import BlogListing from "components/BlogListing"
 import PropTypes from "prop-types"
 import Layout from "components/layout"
 import SEO from "components/seo"
@@ -12,7 +12,7 @@ const Blog = ({
   },
 }) => {
   const Posts = edges.map(edge => (
-    <PostLink key={edge.node.id} post={edge.node} />
+    <BlogListing key={edge.node.id} post={edge.node} />
   ))
 
   return (

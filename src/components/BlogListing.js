@@ -4,7 +4,7 @@ import Container from "components/Container"
 import Image from "gatsby-image"
 import PropTypes from "prop-types"
 
-const PostLink = ({ post }) => (
+const BlogListing = ({ post }) => (
   <div style={{ padding: `0.5rem` }}>
     <Link to={post.frontmatter.path}>
       <Container
@@ -38,8 +38,8 @@ const PostLink = ({ post }) => (
   </div>
 )
 
-PostLink.propTypes = {
+BlogListing.propTypes = {
   post: PropTypes.node.isRequired,
 }
 
-export default PostLink
+export default BlogListing
