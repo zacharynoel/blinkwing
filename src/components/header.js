@@ -10,7 +10,10 @@ import MenuButton from "./MenuButton"
 const Container = styled(`header`)`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   align-items: center;
   padding: 10px;
   z-index: 10;
