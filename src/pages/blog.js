@@ -27,7 +27,7 @@ const Blog = ({
 }
 
 Blog.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default Blog
