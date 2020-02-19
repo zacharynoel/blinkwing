@@ -30,7 +30,7 @@ const Template = ({ data }) => {
           }}
         />
 
-        <p
+        <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
