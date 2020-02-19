@@ -13,8 +13,14 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <Container title={frontmatter.title}>
-        <h3 style={{ paddingBottom: `2rem` }}>{frontmatter.date}</h3>
+      <Container
+        notitle
+        style={{ maxWidth: "500px", padding: "1rem", margin: 0 }}
+      >
+        <div style={{ width: "100%" }}>
+          <h1 style={{ textAlign: "left" }}>{frontmatter.title}</h1>
+          <h3 style={{ padding: `0 0 2rem` }}>{frontmatter.date}</h3>
+        </div>
 
         <Image
           fluid={frontmatter.featuredImage.childImageSharp.fluid}
@@ -38,7 +44,7 @@ const Template = ({ data }) => {
 }
 
 Template.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default Template
