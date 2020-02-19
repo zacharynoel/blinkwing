@@ -12,10 +12,10 @@ const Container = styled(`header`)`
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
   align-items: center;
-  padding: 10px;
+  padding: 1rem;
   z-index: 10;
 
   .logo-nav {

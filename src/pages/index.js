@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
 
       <Container
         title="Modern Tech To Our Advantage"
-        style={{ padding: "1rem 3rem" }}
+        style={{ paddingRight: "3rem", paddingLeft: "3rem" }}
       >
         <p>
           Tech can only advance through better development practices. This is
@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => (
 
     <Container
       title="Core Technologies"
-      style={{ padding: "1rem 0.5rem" }}
+      style={{ paddingRight: "1rem", paddingLeft: "1rem" }}
       secondary
     >
       <TechIcons />

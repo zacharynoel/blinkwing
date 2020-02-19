@@ -65,7 +65,18 @@ footer {
 .foot-links {
   display: flex;
   font-size: 0.8rem;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
+.footer > * {
+  padding: 1rem;
 }
 
 /* Paragraph and Header Text */
@@ -92,5 +103,3 @@ h3 {
   font-weight: 400;
   font-size: 1.1rem;
 }
-
-/* */

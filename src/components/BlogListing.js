@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import Container from "components/Container"
 import Image from "gatsby-image/withIEPolyfill"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+
+import Container from "components/Container"
 
 const BlogListingWrapper = styled.div`
   width: 100%;
@@ -17,21 +18,66 @@ const BlogListingWrapper = styled.div`
 
   .blog-listing-container {
     padding: 1.5rem 0 0;
-    border: 0 auto 1rem;
+    margin: 0 auto 1rem;
     max-width: 500px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.35);
     border-radius: 15px;
-    ${({ featured }) => featured && "background-color: #162a3e;"}
+    background: rgb(199, 199, 199);
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(199, 199, 199, 1) 0%,
+      rgba(237, 237, 237, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(199, 199, 199, 1) 0%,
+      rgba(237, 237, 237, 1) 100%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(199, 199, 199, 1) 0%,
+      rgba(237, 237, 237, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c7c7c7",endColorstr="#ededed",GradientType=1);
+    ${({ featured }) =>
+      featured &&
+      css`
+        background: rgb(22, 42, 62);
+        background: -moz-linear-gradient(
+          180deg,
+          rgba(22, 42, 62, 1) 0%,
+          rgba(61, 92, 124, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          180deg,
+          rgba(22, 42, 62, 1) 0%,
+          rgba(61, 92, 124, 1) 100%
+        );
+        background: linear-gradient(
+          180deg,
+          rgba(22, 42, 62, 1) 0%,
+          rgba(61, 92, 124, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162a3e",endColorstr="#3d5c7c",GradientType=1);
+      `}
+  }
+
+  .blog-listing-text {
+    width: 100%;
+    padding: 1rem 0 0;
+    h1 {
+      font-size: 1.4rem;
+    }
   }
 
   .blog-listing-text p,
   .blog-listing-text h1 {
-    ${({ featured }) => featured && "color: #fff !important;"}
     -webkit-transition: all 250ms ease-in;
     -moz-transition: all 250ms ease-in;
     -ms-transition: all 250ms ease-in;
     -o-transition: all 250ms ease-in;
     transition: all 250ms ease-in;
+    ${({ featured }) => featured && "color: #fff !important;"}
   }
 
   @media only screen and (min-width: 800px) {
@@ -56,19 +102,42 @@ const BlogListingWrapper = styled.div`
       flex-flow: row nowrap;
       height: 300px;
       padding: 0;
-      max-width: 600px;
+      max-width: 775px;
+      ${({ featured }) => featured && "max-width: 650px;"}
+      justify-content: space-between;
+
+      ${({ featured }) =>
+        featured &&
+        css`
+          background: rgb(22, 42, 62);
+          background: -moz-linear-gradient(
+            90deg,
+            rgba(22, 42, 62, 1) 0%,
+            rgba(61, 92, 124, 1) 100%
+          );
+          background: -webkit-linear-gradient(
+            90deg,
+            rgba(22, 42, 62, 1) 0%,
+            rgba(61, 92, 124, 1) 100%
+          );
+          background: linear-gradient(
+            90deg,
+            rgba(22, 42, 62, 1) 0%,
+            rgba(61, 92, 124, 1) 100%
+          );
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162a3e",endColorstr="#3d5c7c",GradientType=1);
+        `}
     }
 
     .img-wrapper {
       height: 100%;
-      width: 300px;
+      width: 400px;
       border-radius: 0 15px 15px 0;
       filter: grayscale(0.25) brightness(0.9);
     }
 
     .blog-listing-text {
-      width: 50%;
-      max-width: 300px;
+      width: 60%;
     }
   }
 `
@@ -97,7 +166,7 @@ const BlogListing = ({ post, featured }) => (
             </h1>
             <p
               style={{
-                padding: "0 0 0.75rem",
+                padding: "0 0 0.25rem",
                 fontWeight: "normal",
                 margin: "0 1rem",
               }}

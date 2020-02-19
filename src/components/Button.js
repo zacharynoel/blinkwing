@@ -21,7 +21,7 @@ const ButtonContainer = styled.button`
   padding: 13px 0;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.35);
   outline: none;
   cursor: pointer;
 

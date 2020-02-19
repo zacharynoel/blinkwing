@@ -43,9 +43,9 @@ const Layout = ({ children }) => {
           <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           {children}
         </Main>
-        <footer>
+        <footer className="footer">
           <NavLinks className="foot-links" />
-          Privacy Policy | © {new Date().getFullYear()} Blinkwing
+          <div>Privacy Policy | © {new Date().getFullYear()} Blinkwing</div>
           <Link to="/">
             <img src={Logo} className="logo-footer" alt="Blinkwing" />
           </Link>
