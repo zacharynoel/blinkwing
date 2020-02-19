@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
+import PropTypes from "prop-types"
+import Image from "gatsby-image"
 
 import Layout from "components/layout"
 import SEO from "components/seo"
@@ -10,8 +12,7 @@ import TechIcons from "components/TechIcons"
 import ContactForm from "components/ContactForm"
 import Button from "components/Button"
 import BulletList from "components/BulletList"
-import PropTypes from "prop-types"
-import Image from "gatsby-image"
+import BlogListing from "components/BlogListing"
 
 const Bar = styled(`div`)`
   background: #162a3e;
@@ -71,38 +72,11 @@ const IndexPage = ({ data }) => (
 
     <Container title="Featured Blog Post">
       <div style={{ padding: `0.5rem` }}>
-        {data.allMarkdownRemark.edges.map(post => (
-          <Link to={post.node.frontmatter.path} key={post.node.id}>
-            <Container
-              noTitle
-              style={{
-                background: `#162a3e`,
-                color: `white`,
-                borderRadius: `30px 30px 30px 30px`,
-                boxShadow: `5px 5px 5px #6f798f`,
-              }}
-            >
-              <div>
-                <div style={{ paddingBottom: `0.7rem`, fontWeight: `bold` }}>
-                  {post.node.frontmatter.title}
-                </div>
-                <div style={{ paddingBottom: `1rem`, fontWeight: `normal` }}>
-                  {post.node.frontmatter.date}
-                </div>
-              </div>
-
-              <Image
-                fluid={
-                  post.node.frontmatter.featuredImage.childImageSharp.fluid
-                }
-                style={{
-                  width: `30vh`,
-                  height: `30vh`,
-                }}
-              />
-            </Container>
-          </Link>
-        ))}
+        {data.allMarkdownRemark.edges.map((post, index) => {
+          return (
+            index === 0 && <BlogListing post={post.node} key={index} featured />
+          )
+        })}
       </div>
     </Container>
 
@@ -126,14 +100,41 @@ const IndexPage = ({ data }) => (
     >
       <ContactForm />
     </Container>
-
-    {/* 
-      TODO: Home sections still needing to be added
-      Followed by...
-      - Featured Blog Post
-    */}
   </Layout>
 )
+
+/*
+<Link to={post.node.frontmatter.path} key={post.node.id}>
+  <Container
+    noTitle
+    style={{
+      background: `#162a3e`,
+      color: `white`,
+      borderRadius: `30px 30px 30px 30px`,
+      boxShadow: `0px 5px 5px #6f798f`,
+    }}
+  >
+    <div>
+      <div style={{ paddingBottom: `0.7rem`, fontWeight: `bold` }}>
+        {post.node.frontmatter.title}
+      </div>
+      <div style={{ paddingBottom: `1rem`, fontWeight: `normal` }}>
+        {post.node.frontmatter.date}
+      </div>
+    </div>
+
+    <Image
+      fluid={
+        post.node.frontmatter.featuredImage.childImageSharp.fluid
+      }
+      style={{
+        width: `30vh`,
+        height: `30vh`,
+      }}
+    />
+  </Container>
+</Link>
+*/
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
