@@ -55,7 +55,7 @@ const About = ({ data }) => (
 )
 
 About.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default About
