@@ -91,11 +91,11 @@ const BlogListingWrapper = styled.div`
 
   .blog-listing-container,
   .img-wrapper {
-    -webkit-transition: filter 500ms ease-in;
-    -moz-transition: filter 500ms ease-in;
-    -ms-transition: filter 500ms ease-in;
-    -o-transition: filter 500ms ease-in;
-    transition: filter 500ms ease-in;
+    -webkit-transition: filter 100ms ease-in;
+    -moz-transition: filter 100ms ease-in;
+    -ms-transition: filter 100ms ease-in;
+    -o-transition: filter 100ms ease-in;
+    transition: filter 100ms ease-in;
     transition-property: filter, background;
   }
 
