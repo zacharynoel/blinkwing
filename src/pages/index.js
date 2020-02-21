@@ -45,13 +45,7 @@ const IndexPage = ({ data }) => (
     <LandingSection image={data.homeBgImage.childImageSharp} />
 
     <div style={{ position: "relative", width: "100%" }}>
-      <Bar />
-      <Bar right />
-
-      <Container
-        title="Modern Tech To Our Advantage"
-        style={{ paddingRight: "3rem", paddingLeft: "3rem" }}
-      >
+      <Container title="Modern Tech To Our Advantage">
         <p>
           Tech can only advance through better development practices. This is
           why at Blinkwing we pride ourselves in always staying up-to-date on

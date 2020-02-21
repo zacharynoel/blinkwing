@@ -28,22 +28,13 @@ const IconWrapper = styled(`div`)`
   justify-content: center;
   align-items: center;
   background-color: rgb(22, 42, 62, 1);
-  padding: 15px;
+  padding: 10px;
   color: white;
-  width: 120px;
+  width: 130px;
   margin: 5px;
   font-size: 18px;
   font-weight: 400;
   border-radius: 15px;
-
-  @media only screen and (max-width: 450px) {
-    width: 100px;
-    padding: 10px;
-
-    img {
-      max-height: 80px;
-    }
-  }
 `
 
 const TechIcons = () => (

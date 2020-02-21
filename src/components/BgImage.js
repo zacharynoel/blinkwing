@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Image from "gatsby-image"
+import Image from "gatsby-image/withIEPolyfill"
 
 const BgImage = ({ style, ...props }) => (
   <Image
+    objectPosition={"50% 70%"}
     {...props}
     style={{
       position: "absolute",

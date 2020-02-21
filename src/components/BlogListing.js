@@ -80,30 +80,31 @@ const BlogListingWrapper = styled.div`
     ${({ featured }) => featured && "color: #fff !important;"}
   }
 
-  @media only screen and (min-width: 800px) {
-    :hover,
-    :active {
-      .img-wrapper {
-        filter: grayscale(0) brightness(1.1);
-      }
-    }
-
-    .blog-listing-container,
+  :hover,
+  :active {
     .img-wrapper {
-      -webkit-transition: filter 500ms ease-in;
-      -moz-transition: filter 500ms ease-in;
-      -ms-transition: filter 500ms ease-in;
-      -o-transition: filter 500ms ease-in;
-      transition: filter 500ms ease-in;
-      transition-property: filter, background;
+      filter: grayscale(0) brightness(1.1);
     }
+    transform: scale(1.015);
+    transition: transform 100ms ease-in;
+  }
 
+  .blog-listing-container,
+  .img-wrapper {
+    -webkit-transition: filter 500ms ease-in;
+    -moz-transition: filter 500ms ease-in;
+    -ms-transition: filter 500ms ease-in;
+    -o-transition: filter 500ms ease-in;
+    transition: filter 500ms ease-in;
+    transition-property: filter, background;
+  }
+
+  @media only screen and (min-width: 800px) {
     .blog-listing-container {
       flex-flow: row nowrap;
       height: 300px;
       padding: 0;
       max-width: 775px;
-      ${({ featured }) => featured && "max-width: 650px;"}
       justify-content: space-between;
 
       ${({ featured }) =>
