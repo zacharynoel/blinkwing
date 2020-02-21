@@ -12,54 +12,45 @@ const LandingContainer = styled(`section`)`
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  height: 437px;
-  padding: 3rem 0 0;
+  height: 500px;
 
   h1,
   h2 {
     color: #ffffff;
-    font-size: 29px;
-    margin: 0 auto;
+    font-size: 2rem;
+    margin: 1rem auto;
     text-align: center;
     padding: 0 15px;
   }
 
   h2 {
-    font-size: 21px;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    height: 537px;
+    font-size: 1.5rem;
   }
 `
 
 const ImageCover = styled(`div`)`
   position: absolute;
   top: 0;
-  height: 437px;
+  height: 500px;
   width: 100vw;
   z-index: -1;
-  background: rgb(22, 42, 62, 0.44);
+  background: rgb(22, 42, 62, 0.7);
   background: -moz-linear-gradient(
     0deg,
-    rgba(22, 42, 62, 1) 0%,
-    rgba(22, 42, 62, 0.35) 100%
+    rgba(22, 42, 62, 0.7) -10%,
+    rgba(22, 42, 62, 0.7) 10%
   );
   background: -webkit-linear-gradient(
     0deg,
-    rgba(22, 42, 62, 1) 0%,
-    rgba(22, 42, 62, 0.35) 100%
+    rgba(22, 42, 62, 0.7) -10%,
+    rgba(22, 42, 62, 0.7) 10%
   );
   background: linear-gradient(
     0deg,
-    rgba(22, 42, 62, 1) 0%,
-    rgba(22, 42, 62, 0.35) 100%
+    rgba(22, 42, 62, 0.7) -10%,
+    rgba(22, 42, 62, 0.7) 10%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#162a3e",endColorstr="#162a3e",GradientType=1);
-
-  @media only screen and (min-width: 1200px) {
-    height: 537px;
-  }
 `
 
 const ButtonsContainer = styled(`div`)`
@@ -73,19 +64,17 @@ const ButtonsContainer = styled(`div`)`
 `
 
 const CustomBgImage = styled(BgImage)`
-  height: 437px !important;
-
-  @media only screen and (min-width: 1200px) {
-    height: 537px !important;
-  }
+  height: 500px !important;
 `
 
 const LandingSection = ({ image }) => (
   <LandingContainer>
-    <CustomBgImage fluid={image.fluid} />
+    <CustomBgImage fluid={image.fluid} objectPosition={"50% 70%"} />
     <ImageCover />
-    <h1>Modern, Fast, Responsive Websites</h1>
-    <h2>Based in Fresno, we’re ready to build your next web project</h2>
+    <div>
+      <h1>Modern, Fast, Responsive Websites</h1>
+      <h2>Based in Fresno, we’re ready to build your next web project</h2>
+    </div>
     <ButtonsContainer>
       <Link to="/services" style={{ padding: 5 }}>
         <Button>Our Services</Button>
