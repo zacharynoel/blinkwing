@@ -4,7 +4,6 @@ import Image from "gatsby-image/withIEPolyfill"
 
 const BgImage = ({ style, ...props }) => (
   <Image
-    objectPosition={"50% 70%"}
     {...props}
     style={{
       position: "absolute",

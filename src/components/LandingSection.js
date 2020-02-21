@@ -18,7 +18,7 @@ const LandingContainer = styled(`section`)`
   h2 {
     color: #ffffff;
     font-size: 2rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     text-align: center;
     padding: 0 15px;
   }
@@ -69,11 +69,10 @@ const CustomBgImage = styled(BgImage)`
 
 const LandingSection = ({ image }) => (
   <LandingContainer>
-    <CustomBgImage fluid={image.fluid} />
+    <CustomBgImage fluid={image.fluid} objectPosition={"50% 70%"} />
     <ImageCover />
     <div>
       <h1>Modern, Fast, Responsive Websites</h1>
-      <br></br>
       <h2>Based in Fresno, we’re ready to build your next web project</h2>
     </div>
     <ButtonsContainer>
