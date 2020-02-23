@@ -85,6 +85,10 @@ const BlogListingWrapper = styled.div`
     .img-wrapper {
       filter: grayscale(0) brightness(1.1);
     }
+    -moz-transform: scale(1.015);
+    -webkit-transform: scale(1.015);
+    -o-transform: scale(1.015);
+    -ms-transform: scale(1.015);
     transform: scale(1.015);
     transition: transform 100ms ease-in;
   }
