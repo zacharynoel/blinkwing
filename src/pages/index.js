@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import Container from "components/Container"
+import ServicesContainer from "components/ServicesContainer"
 import LandingSection from "components/LandingSection"
 import TechIcons from "components/TechIcons"
 import ContactForm from "components/ContactForm"
@@ -29,14 +30,30 @@ const Bar = styled(`div`)`
   }
 `
 
-const SERVICES_LIST = [
-  "Web Design and Development",
-  "Web Hosting",
-  "SEO Services",
-  "eCommerce",
-  "Content Management System",
-  "Logo Design and Rebranding",
-  "Software Consulting",
+const DEVELOPMENT_LIST = [
+  "A custom website to fit your business needs",
+  "We take you through the entire process from design to implementation",
+]
+
+const HOSTING_LIST = [
+  "Web hosting to meet all of your website's traffic requirements",
+  "Gain access to your own hosting server through your cPanel account",
+]
+
+const SEO_LIST = [
+  "Rank higher on Google and other search engines",
+  "Stay competitive in your industry",
+  "Take advantage of your business's strengths",
+]
+
+const ECOMMERCE_LIST = [
+  "Allow customers to buy your product on your own online store",
+  "Customers can check out and pay right on your website",
+]
+
+const CMS_LIST = [
+  "Add, remove, or update content on your own site",
+  "Great for blogs, menus, and eCommerce sites",
 ]
 
 const IndexPage = ({ data }) => (
@@ -74,13 +91,37 @@ const IndexPage = ({ data }) => (
     </Container>
 
     <Container title="Our Services" secondary>
-      <BulletList list={SERVICES_LIST} />
+      <ServicesContainer title="Web Design and Development" banner>
+        <BulletList list={DEVELOPMENT_LIST} />
+        <Link to="/services">
+          <Button
+            secondary
+            style={{ margin: "1rem auto" }}
+          >{`Learn More`}</Button>
+        </Link>
+      </ServicesContainer>
 
-      <Link to="/services">
-        <Button
-          style={{ margin: "1rem auto" }}
-        >{`View Pricing & More Info`}</Button>
-      </Link>
+      <div
+        style={{
+          display: `flex`,
+          flexFlow: `row wrap`,
+          maxWidth: `775px`,
+          justifyContent: `space-between`,
+        }}
+      >
+        <ServicesContainer title="Web Hosting">
+          <BulletList list={HOSTING_LIST} />
+        </ServicesContainer>
+        <ServicesContainer title="SEO (Search Engine Optimization)">
+          <BulletList list={SEO_LIST} />
+        </ServicesContainer>
+        <ServicesContainer title="eCommerce">
+          <BulletList list={ECOMMERCE_LIST} />
+        </ServicesContainer>
+        <ServicesContainer title="CMS (Content Management System)">
+          <BulletList list={CMS_LIST} />
+        </ServicesContainer>
+      </div>
     </Container>
 
     <Container
