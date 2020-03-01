@@ -107,7 +107,7 @@ const ServicesContainer = ({
     <h2>
       {title}
       <br />
-      <h6>{clarifier}</h6>
+      <div style={{ fontSize: `0.9rem` }}>{clarifier}</div>
     </h2>
     {children}
   </ContainerStyle>
