@@ -43,21 +43,23 @@ const Container = styled(`header`)`
 `
 
 const Header = ({ setMenuOpen, menuOpen }) => (
-  <Container>
-    <div>
-      <Link to="/">
-        <img src={Logo} className="logo-nav" alt="Blinkwing" />
-      </Link>
-    </div>
+  <div style={{ boxShadow: `0px 3px 10px rgba(0, 0, 0, 0.1)` }}>
+    <Container>
+      <div>
+        <Link to="/">
+          <img src={Logo} className="logo-nav" alt="Blinkwing" />
+        </Link>
+      </div>
 
-    <Nav />
-    <MenuButton
-      menuOpen={menuOpen}
-      onClick={() => {
-        setMenuOpen(!menuOpen)
-      }}
-    />
-  </Container>
+      <Nav />
+      <MenuButton
+        menuOpen={menuOpen}
+        onClick={() => {
+          setMenuOpen(!menuOpen)
+        }}
+      />
+    </Container>
+  </div>
 )
 
 Header.propTypes = {

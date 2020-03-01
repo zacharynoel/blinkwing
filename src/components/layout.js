@@ -43,13 +43,15 @@ const Layout = ({ children }) => {
           <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           {children}
         </Main>
-        <footer className="footer">
-          <NavLinks className="foot-links" />
-          <div>Privacy Policy | © {new Date().getFullYear()} Blinkwing</div>
-          <Link to="/">
-            <img src={Logo} className="logo-footer" alt="Blinkwing" />
-          </Link>
-        </footer>
+        <div style={{ boxShadow: `0px -3px 10px rgba(0, 0, 0, 0.1)` }}>
+          <footer className="footer">
+            <NavLinks className="foot-links" />
+            <div>Privacy Policy | © {new Date().getFullYear()} Blinkwing</div>
+            <Link to="/">
+              <img src={Logo} className="logo-footer" alt="Blinkwing" />
+            </Link>
+          </footer>
+        </div>
       </div>
     </>
   )

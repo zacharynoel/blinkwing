@@ -29,6 +29,11 @@ const ContainerStyle = styled.section`
     padding-bottom: 2rem;
   }
 
+  p {
+    max-width: 500px;
+    color: white;
+  }
+
   @media only screen and (min-width: 800px) {
     max-width: 360px;
     margin: 1rem 0;
@@ -79,19 +84,31 @@ const Bar = styled(`div`)`
   text-align: center;
   padding: 0.5rem;
 
-  ${({ banner }) =>
-    banner &&
+  ${({ notab }) =>
+    notab &&
     css`
       display: none;
     `}
 `
 
-const ServicesContainer = ({ title, banner, children, ...props }) => (
+const ServicesContainer = ({
+  title,
+  clarifier,
+  banner,
+  tab,
+  notab,
+  children,
+  ...props
+}) => (
   <ContainerStyle banner={banner} {...props}>
-    <Bar banner={banner}>
-      <h4>Additional Services</h4>
+    <Bar notab={notab}>
+      <h4>{tab}</h4>
     </Bar>
-    <h2>{title}</h2>
+    <h2>
+      {title}
+      <br />
+      <h6>{clarifier}</h6>
+    </h2>
     {children}
   </ContainerStyle>
 )
@@ -99,12 +116,18 @@ const ServicesContainer = ({ title, banner, children, ...props }) => (
 ServicesContainer.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
+  clarifier: PropTypes.string.isRequired,
   banner: PropTypes.bool.isRequired,
+  tab: PropTypes.string.isRequired,
+  notab: PropTypes.bool.isRequired,
 }
 
 ServicesContainer.defaultProps = {
   title: "",
+  clarifier: "",
   banner: false,
+  tab: "",
+  notab: false,
 }
 
 export default ServicesContainer
