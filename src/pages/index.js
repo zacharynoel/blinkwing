@@ -72,11 +72,7 @@ const IndexPage = ({ data }) => (
       </Container>
     </div>
 
-    <Container
-      title="Core Technologies"
-      style={{ paddingRight: "1rem", paddingLeft: "1rem" }}
-      secondary
-    >
+    <Container title="Core Technologies" secondary>
       <TechIcons />
     </Container>
 
@@ -91,7 +87,7 @@ const IndexPage = ({ data }) => (
     </Container>
 
     <Container title="Our Services" secondary>
-      <ServicesContainer title="Web Design and Development" banner>
+      <ServicesContainer title="Web Design and Development" banner notab>
         <BulletList list={DEVELOPMENT_LIST} />
         <Link to="/services">
           <Button
@@ -109,16 +105,24 @@ const IndexPage = ({ data }) => (
           justifyContent: `space-between`,
         }}
       >
-        <ServicesContainer title="Web Hosting">
+        <ServicesContainer title="Web Hosting" tab="Additional Services">
           <BulletList list={HOSTING_LIST} />
         </ServicesContainer>
-        <ServicesContainer title="SEO (Search Engine Optimization)">
+        <ServicesContainer
+          title="SEO"
+          clarifier="(Search Engine Optimization)"
+          tab="Additional Services"
+        >
           <BulletList list={SEO_LIST} />
         </ServicesContainer>
-        <ServicesContainer title="eCommerce">
+        <ServicesContainer title="eCommerce" tab="Additional Services">
           <BulletList list={ECOMMERCE_LIST} />
         </ServicesContainer>
-        <ServicesContainer title="CMS (Content Management System)">
+        <ServicesContainer
+          title="CMS"
+          clarifier="(Content Management System)"
+          tab="Additional Services"
+        >
           <BulletList list={CMS_LIST} />
         </ServicesContainer>
       </div>

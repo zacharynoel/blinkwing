@@ -11,6 +11,7 @@ const IconsContainer = styled(`div`)`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  max-width: 510px;
   align-items: center;
   text-align: center;
   width: 100%;
@@ -19,6 +20,11 @@ const IconsContainer = styled(`div`)`
     max-height: 100px;
     padding: 0 0 10px;
     text-align: center;
+  }
+
+  @media only screen and (min-width: 800px) {
+    justify-content: space-between;
+    max-width: 785px;
   }
 `
 
@@ -30,8 +36,8 @@ const IconWrapper = styled(`div`)`
   background-color: rgb(22, 42, 62, 1);
   padding: 10px;
   color: white;
-  width: 130px;
-  margin: 5px;
+  width: 134px;
+  margin 5px;
   font-size: 18px;
   font-weight: 400;
   border-radius: 15px;

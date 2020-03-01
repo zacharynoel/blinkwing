@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "components/layout"
 import SEO from "components/seo"
+import ServicesContainer from "components/ServicesContainer"
 import Container from "components/Container"
 import Button from "components/Button"
 import { Link } from "gatsby"
@@ -28,43 +29,60 @@ const SERVICES_LIST = [
 const Services = () => (
   <Layout>
     <SEO title="Services" />
-    <Container title="Services" style={{ maxWidth: 500 }}>
-      <h3
-        style={{ padding: `1rem 0 1.5rem` }}
-      >{`Here's the Blinkwing Method`}</h3>
 
-      <BulletList type={2} list={METHODS_LIST} />
+    <Container title="How Can We Help?">
+      <div
+        style={{
+          display: `flex`,
+          flexFlow: `row wrap`,
+          maxWidth: `775px`,
+          justifyContent: `space-between`,
+        }}
+      >
+        <ServicesContainer title="Here's the Blinkwing Method" tab="Services">
+          <BulletList
+            type={2}
+            list={METHODS_LIST}
+            style={{ width: "100%", textAlign: "left" }}
+          />
+        </ServicesContainer>
 
-      <h3 style={{ padding: `2rem 0 1.5rem` }}>What We Offer</h3>
+        <ServicesContainer title="What We Offer" tab="Services">
+          <BulletList
+            list={SERVICES_LIST}
+            style={{ width: "100%", textAlign: "left" }}
+          />
+        </ServicesContainer>
 
-      <BulletList
-        list={SERVICES_LIST}
-        style={{ width: "100%", textAlign: "left" }}
-      />
-    </Container>
+        <ServicesContainer title="Pricing" banner notab>
+          <div>
+            <p>
+              Pricing is determined by the size and scope of your project,
+              however our starting prices are listed here:
+            </p>
+            <p>
+              Website design/development <b>starting from $500</b>
+            </p>
+            <p>
+              Website hosting <b>starting from $50/month</b>
+            </p>
+            <p>
+              Logo design <b>starting from $200</b>
+            </p>
+            <p>{`If you have any questions about our pricing or want an exact quote,
+            please contact us so that we can discuss your project's needs.`}</p>
+          </div>
 
-    <Container title="Pricing" style={{ maxWidth: 500 }}>
-      <div>
-        <p>
-          Pricing is determined by the size and scope of your project, however
-          our starting prices are listed here:
-        </p>
-        <p>
-          Website design/development <b>starting from $500</b>
-        </p>
-        <p>
-          Website hosting <b>starting from $50/month</b>
-        </p>
-        <p>
-          Logo design <b>starting from $200</b>
-        </p>
-        <p>{`If you have any questions about our pricing or want an exact quote,
-        please contact us so that we can discuss your project's needs.`}</p>
+          <Link
+            to="/contact"
+            style={{ margin: "30px auto", textAlign: "center" }}
+          >
+            <Button secondary style={{ margin: "1rem auto" }}>
+              {`Get in Touch`}
+            </Button>
+          </Link>
+        </ServicesContainer>
       </div>
-
-      <Link to="/contact" style={{ margin: "30px auto", textAlign: "center" }}>
-        <Button>Get in Touch</Button>
-      </Link>
     </Container>
   </Layout>
 )
