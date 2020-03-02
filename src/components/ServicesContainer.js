@@ -6,37 +6,41 @@ const ContainerStyle = styled.section`
   display: flex;
   position: relative;
   align-items: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
   width: 100%;
   max-width: 500px;
-  min-height: 350px;
+  min-height: 400px;
   font-family: "Montserrat", sans-serif;
-  flex-wrap: nowrap;
-  padding: 1rem 1rem;
-  margin: 1rem auto;
   background-color: white;
+  ${({ notab }) => !notab && "padding-top: 1rem;"}
+  padding: 3rem 2rem 2rem;
+  margin: 1rem 0 0;
+  ${({ banner }) => !banner && "margin: 1rem auto 1rem;"}
 
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.35);
   border-radius: 15px;
 
   h4 {
     color: white;
-    z-index: 0;
+    font-weight: 600;
   }
 
   h2 {
-    padding-top: 3rem;
     padding-bottom: 2rem;
   }
 
   p {
     max-width: 500px;
     color: white;
+    margin: 0 auto;
+    width: 100%;
   }
 
   @media only screen and (min-width: 800px) {
-    max-width: 360px;
+    max-width: 370px;
     margin: 1rem 0;
+    padding: 3rem 1rem 2rem;
   }
 
   ${({ banner }) =>
@@ -47,7 +51,6 @@ const ContainerStyle = styled.section`
 
       h2 {
         color: white;
-        padding-top: 1rem;
       }
 
       background: rgb(74, 101, 128);
@@ -70,6 +73,7 @@ const ContainerStyle = styled.section`
 
       @media only screen and (min-width: 800px) {
         max-width: 775px;
+        margin: 1rem 0 0;
       }
     `}
 `
@@ -79,16 +83,9 @@ const Bar = styled(`div`)`
   position: absolute;
   top: 0;
   width: 100%;
-  height: 2rem;
   border-radius: 15px 15px 0 0;
   text-align: center;
-  padding: 0.5rem;
-
-  ${({ notab }) =>
-    notab &&
-    css`
-      display: none;
-    `}
+  padding: 0.5rem 0;
 `
 
 const ServicesContainer = ({
@@ -101,13 +98,16 @@ const ServicesContainer = ({
   ...props
 }) => (
   <ContainerStyle banner={banner} {...props}>
-    <Bar notab={notab}>
-      <h4>{tab}</h4>
-    </Bar>
+    {!notab && (
+      <Bar notab={notab}>
+        <h4>{tab}</h4>
+      </Bar>
+    )}
     <h2>
       {title}
-      <br />
-      <div style={{ fontSize: `0.9rem` }}>{clarifier}</div>
+      <div style={{ fontSize: `0.9rem`, lineHeight: 0, paddingTop: 5 }}>
+        {clarifier}
+      </div>
     </h2>
     {children}
   </ContainerStyle>

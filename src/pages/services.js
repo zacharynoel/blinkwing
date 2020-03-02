@@ -36,15 +36,12 @@ const Services = () => (
           display: `flex`,
           flexFlow: `row wrap`,
           maxWidth: `775px`,
+          width: `100%`,
           justifyContent: `space-between`,
         }}
       >
         <ServicesContainer title="Here's the Blinkwing Method" tab="Services">
-          <BulletList
-            type={2}
-            list={METHODS_LIST}
-            style={{ width: "100%", textAlign: "left" }}
-          />
+          <BulletList type={2} list={METHODS_LIST} />
         </ServicesContainer>
 
         <ServicesContainer title="What We Offer" tab="Services">
@@ -53,36 +50,32 @@ const Services = () => (
             style={{ width: "100%", textAlign: "left" }}
           />
         </ServicesContainer>
-
-        <ServicesContainer title="Pricing" banner notab>
-          <div>
-            <p>
-              Pricing is determined by the size and scope of your project,
-              however our starting prices are listed here:
-            </p>
-            <p>
-              Website design/development <b>starting from $500</b>
-            </p>
-            <p>
-              Website hosting <b>starting from $50/month</b>
-            </p>
-            <p>
-              Logo design <b>starting from $200</b>
-            </p>
-            <p>{`If you have any questions about our pricing or want an exact quote,
-            please contact us so that we can discuss your project's needs.`}</p>
-          </div>
-
-          <Link
-            to="/contact"
-            style={{ margin: "30px auto", textAlign: "center" }}
-          >
-            <Button secondary style={{ margin: "1rem auto" }}>
-              {`Get in Touch`}
-            </Button>
-          </Link>
-        </ServicesContainer>
       </div>
+
+      <ServicesContainer title="Pricing" banner notab style={{ margin: "0" }}>
+        <p style={{ paddingTop: 0 }}>
+          Pricing is determined by the size and scope of your project, however
+          our starting prices are listed here:
+        </p>
+        <p>
+          Website design/development <b>starting from $500</b>
+        </p>
+        <p>
+          Website hosting <b>starting from $50/month</b>
+        </p>
+        <p>
+          Logo design <b>starting from $200</b>
+        </p>
+        <p>
+          {`If you have any questions about our pricing or want an exact quote,
+        please contact us so that we can discuss your project's needs.`}
+        </p>
+        <Link to="/contact" style={{ margin: "10px 0", maxWidth: "100%" }}>
+          <Button secondary style={{ margin: "1rem auto" }}>
+            {`Get in Touch`}
+          </Button>
+        </Link>
+      </ServicesContainer>
     </Container>
   </Layout>
 )
