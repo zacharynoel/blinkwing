@@ -1,18 +1,26 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Header from "./header"
+import styled from "styled-components"
 import "./layout.css"
+import Logo from "images/full-logo.svg"
+import NavLinks from "./NavLinks"
+import Menu from "./Menu"
+
+const Main = styled(`main`)`
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-flow: column nowrap;
+  width: 100%;
+  position: relative;
+`
 
 const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,20 +33,25 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <div className="wrapper">
+        <Header
+          setMenuOpen={setMenuOpen}
+          menuOpen={menuOpen}
+          siteTitle={data.site.siteMetadata.title}
+        />
+        <Main menuOpen={menuOpen}>
+          <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          {children}
+        </Main>
+        <div style={{ boxShadow: `0px -3px 10px rgba(0, 0, 0, 0.1)` }}>
+          <footer className="footer">
+            <NavLinks className="foot-links" />
+            <div>Privacy Policy | © {new Date().getFullYear()} Blinkwing</div>
+            <Link to="/">
+              <img src={Logo} className="logo-footer" alt="Blinkwing" />
+            </Link>
+          </footer>
+        </div>
       </div>
     </>
   )
